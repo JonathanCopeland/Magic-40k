@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD561D452A3F7A7C00FAAB55 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD561D442A3F7A7C00FAAB55 /* CardView.swift */; };
 		BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */; };
 		BD86E6482A3DB76800083CED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86E6472A3DB76800083CED /* ContentView.swift */; };
 		BD86E64A2A3DB76A00083CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD86E6492A3DB76A00083CED /* Assets.xcassets */; };
 		BD86E64D2A3DB76A00083CED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD86E64C2A3DB76A00083CED /* Preview Assets.xcassets */; };
+		BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */ = {isa = PBXBuildFile; fileRef = BDDE3EB32A3F7421003F6F81 /* 40k.json */; };
+		BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */; };
+		BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD561D442A3F7A7C00FAAB55 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		BD86E6422A3DB76800083CED /* Magic x 40k.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic x 40k.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_x_40kApp.swift; sourceTree = "<group>"; };
 		BD86E6472A3DB76800083CED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD86E6492A3DB76A00083CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD86E64C2A3DB76A00083CED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDDE3EB32A3F7421003F6F81 /* 40k.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 40k.json; sourceTree = "<group>"; };
+		BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversesBeyond.swift; sourceTree = "<group>"; };
+		BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */,
 				BD86E6472A3DB76800083CED /* ContentView.swift */,
+				BD561D442A3F7A7C00FAAB55 /* CardView.swift */,
+				BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */,
+				BDDE3EB32A3F7421003F6F81 /* 40k.json */,
+				BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */,
 				BD86E6492A3DB76A00083CED /* Assets.xcassets */,
 				BD86E64B2A3DB76A00083CED /* Preview Content */,
 			);
@@ -125,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */,
 				BD86E64D2A3DB76A00083CED /* Preview Assets.xcassets in Resources */,
 				BD86E64A2A3DB76A00083CED /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD86E6482A3DB76800083CED /* ContentView.swift in Sources */,
+				BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */,
 				BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */,
+				BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */,
+				BD561D452A3F7A7C00FAAB55 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

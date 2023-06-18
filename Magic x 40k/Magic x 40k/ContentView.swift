@@ -7,18 +7,26 @@
 
 import SwiftUI
 
+let universes: UniversesBeyond = Bundle.main.decode("40k.json")
+
 struct ContentView: View {
+        
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+
+        NavigationView {
+            List(universes.data.cards) { card in
+                NavigationLink {
+                    CardView(card: card)
+                } label: {
+                    Text(card.name)
+                }
+            }
         }
-        .padding()
+        
     }
 }
 
 #Preview {
     ContentView()
 }
+
