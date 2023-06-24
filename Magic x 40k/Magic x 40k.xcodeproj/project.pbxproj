@@ -7,23 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */; };
+		BD46435F2A4753EE009C0800 /* frame-header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46435E2A4753EE009C0800 /* frame-header.swift */; };
+		BD4643652A4762B1009C0800 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4643642A4762B1009C0800 /* Test.swift */; };
 		BD561D452A3F7A7C00FAAB55 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD561D442A3F7A7C00FAAB55 /* CardView.swift */; };
 		BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */; };
 		BD86E6482A3DB76800083CED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86E6472A3DB76800083CED /* ContentView.swift */; };
 		BD86E64A2A3DB76A00083CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD86E6492A3DB76A00083CED /* Assets.xcassets */; };
 		BD86E64D2A3DB76A00083CED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD86E64C2A3DB76A00083CED /* Preview Assets.xcassets */; };
+		BDA3A6C12A44DFDA004BE129 /* MagicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3A6C02A44DFDA004BE129 /* MagicCardView.swift */; };
 		BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */ = {isa = PBXBuildFile; fileRef = BDDE3EB32A3F7421003F6F81 /* 40k.json */; };
 		BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */; };
 		BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatrixBold.ttf; sourceTree = "<group>"; };
+		BD1FF00C2A47916300556CFE /* Magic-x-40k-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Magic-x-40k-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BD46435E2A4753EE009C0800 /* frame-header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "frame-header.swift"; sourceTree = "<group>"; };
+		BD4643642A4762B1009C0800 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		BD561D442A3F7A7C00FAAB55 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		BD86E6422A3DB76800083CED /* Magic x 40k.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic x 40k.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_x_40kApp.swift; sourceTree = "<group>"; };
 		BD86E6472A3DB76800083CED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD86E6492A3DB76A00083CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD86E64C2A3DB76A00083CED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDA3A6C02A44DFDA004BE129 /* MagicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardView.swift; sourceTree = "<group>"; };
 		BDDE3EB32A3F7421003F6F81 /* 40k.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 40k.json; sourceTree = "<group>"; };
 		BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversesBeyond.swift; sourceTree = "<group>"; };
 		BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -40,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD1FF0092A4790D200556CFE /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		BD86E6392A3DB76800083CED = {
 			isa = PBXGroup;
 			children = (
@@ -59,8 +76,13 @@
 		BD86E6442A3DB76800083CED /* Magic x 40k */ = {
 			isa = PBXGroup;
 			children = (
+				BD1FF00C2A47916300556CFE /* Magic-x-40k-Info.plist */,
+				BD1FF0092A4790D200556CFE /* Font */,
 				BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */,
 				BD86E6472A3DB76800083CED /* ContentView.swift */,
+				BDA3A6C02A44DFDA004BE129 /* MagicCardView.swift */,
+				BD46435E2A4753EE009C0800 /* frame-header.swift */,
+				BD4643642A4762B1009C0800 /* Test.swift */,
 				BD561D442A3F7A7C00FAAB55 /* CardView.swift */,
 				BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */,
 				BDDE3EB32A3F7421003F6F81 /* 40k.json */,
@@ -138,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */,
+				BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */,
 				BD86E64D2A3DB76A00083CED /* Preview Assets.xcassets in Resources */,
 				BD86E64A2A3DB76A00083CED /* Assets.xcassets in Resources */,
 			);
@@ -150,9 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA3A6C12A44DFDA004BE129 /* MagicCardView.swift in Sources */,
 				BD86E6482A3DB76800083CED /* ContentView.swift in Sources */,
+				BD46435F2A4753EE009C0800 /* frame-header.swift in Sources */,
 				BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */,
 				BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */,
+				BD4643652A4762B1009C0800 /* Test.swift in Sources */,
 				BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */,
 				BD561D452A3F7A7C00FAAB55 /* CardView.swift in Sources */,
 			);
@@ -291,11 +317,13 @@
 				DEVELOPMENT_TEAM = CB29M8E526;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Magic-x-40k-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,11 +348,13 @@
 				DEVELOPMENT_TEAM = CB29M8E526;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Magic-x-40k-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

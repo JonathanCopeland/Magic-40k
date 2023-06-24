@@ -12,17 +12,18 @@ let universes: UniversesBeyond = Bundle.main.decode("40k.json")
 struct ContentView: View {
         
     var body: some View {
-
+        
         NavigationView {
             List(universes.data.cards) { card in
-                NavigationLink {
-                    CardView(card: card)
-                } label: {
-                    Text(card.name)
+                if(card.finishes[0].rawValue == "nonfoil") {
+                    NavigationLink {
+                        CardView(card: card)
+                    } label: {
+                        Text(card.name)
+                    }
                 }
             }
         }
-        
     }
 }
 
