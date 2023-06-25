@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1CA1122A487581000B402B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA1112A487581000B402B /* ImageView.swift */; };
+		BD1CA1142A488807000B402B /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA1132A488807000B402B /* BodyView.swift */; };
 		BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */; };
 		BD46435F2A4753EE009C0800 /* frame-header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46435E2A4753EE009C0800 /* frame-header.swift */; };
 		BD4643652A4762B1009C0800 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4643642A4762B1009C0800 /* Test.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD1CA1112A487581000B402B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		BD1CA1132A488807000B402B /* BodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
 		BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatrixBold.ttf; sourceTree = "<group>"; };
 		BD1FF00C2A47916300556CFE /* Magic-x-40k-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Magic-x-40k-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BD46435E2A4753EE009C0800 /* frame-header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "frame-header.swift"; sourceTree = "<group>"; };
@@ -82,8 +86,10 @@
 				BD86E6472A3DB76800083CED /* ContentView.swift */,
 				BDA3A6C02A44DFDA004BE129 /* MagicCardView.swift */,
 				BD46435E2A4753EE009C0800 /* frame-header.swift */,
+				BD1CA1112A487581000B402B /* ImageView.swift */,
 				BD4643642A4762B1009C0800 /* Test.swift */,
 				BD561D442A3F7A7C00FAAB55 /* CardView.swift */,
+				BD1CA1132A488807000B402B /* BodyView.swift */,
 				BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */,
 				BDDE3EB32A3F7421003F6F81 /* 40k.json */,
 				BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */,
@@ -175,10 +181,12 @@
 			files = (
 				BDA3A6C12A44DFDA004BE129 /* MagicCardView.swift in Sources */,
 				BD86E6482A3DB76800083CED /* ContentView.swift in Sources */,
+				BD1CA1142A488807000B402B /* BodyView.swift in Sources */,
 				BD46435F2A4753EE009C0800 /* frame-header.swift in Sources */,
 				BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */,
 				BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */,
 				BD4643652A4762B1009C0800 /* Test.swift in Sources */,
+				BD1CA1122A487581000B402B /* ImageView.swift in Sources */,
 				BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */,
 				BD561D452A3F7A7C00FAAB55 /* CardView.swift in Sources */,
 			);

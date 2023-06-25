@@ -9,31 +9,45 @@ import SwiftUI
 
 struct frame_header: View {
     var body: some View {
+        
         ZStack {
+            
+            RoundedRectangle(cornerRadius: 10)
+                .fill(.cardBorder)
+                .frame(width: 323, height: 36)
+            
             RoundedRectangle(cornerRadius: 8)
-                .fill(.blue)
-                .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.3), .black.opacity(0.3)]), startPoint: .top, endPoint: .bottom), lineWidth: 4)
-
+                .fill(.cardBackgroundTextHeading)
+                .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(1), .black.opacity(1)]), startPoint: .top, endPoint: .bottom).blendMode(.overlay), lineWidth: 4)
                 .strokeBorder(lineWidth: 1)
-                .frame(width: .infinity, height: 32)
+                .frame(width: 319, height: 32)
+                .padding([.top, .bottom], 2)
+                .padding([.leading, .trailing], 2)
             
                 
                 
             HStack {
                 Text("And They Shall Know No Fear")
-                    .font(.custom("Matrix", size: 18))
+                    .font(.custom("Matrix", size: 15))
                 
                 Spacer()
                 
-                HStack (spacing: 0) {
-                    Image(systemName: "1.circle")
-                    Image(systemName: "flame.circle.fill")
+                HStack (spacing: 3) {
+                    Image("1")
+                        .resizable()
+                        .frame(width: 14.0, height: 14.0)
+                    Image("W")
+                        .resizable()
+                        .frame(width: 14.0, height: 14.0)
                 }
+                .shadow(radius: 1)
+                
+                
             }
+            .frame(width: 300)
             .padding([.all], 10)
 
         }
-        .padding()
 
         
 

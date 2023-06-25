@@ -15,70 +15,65 @@ struct CardView: View {
     var body: some View {
         
         ScrollView {
-            VStack (alignment: .leading) {
+            VStack (alignment: .center, spacing: 0) {
+                
+                frame_header()
+                
+                ImageView()
+            
+                
                 ZStack {
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(.blue)
-                        .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.3), .black.opacity(0.3)]), startPoint: .top, endPoint: .bottom), lineWidth: 4)
-
-                        .strokeBorder(lineWidth: 1)
-                        .frame(width: .infinity, height: 32)
                     
-                        
-                        
-                    HStack {
-                        Text(card.name)
-                            .font(.custom("Matrix", size: 18))
-                        
-                        Spacer()
-                        
-                        HStack (spacing: 0) {
-                            Image(systemName: "1.circle")
-                            Image(systemName: "flame.circle.fill")
-                        }
-                    }
-                    .padding([.all], 10)
-
-                }
-                
-                Image("40k-9-and-they-shall-know-no-fear")
-                    .resizable()
-                    .scaledToFit()
-                
-                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.cardBorder)
+                        .frame(width: 323, height: 36)
+                    
                     RoundedRectangle(cornerRadius: 8)
-                        .fill(.blue)
-                        .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.3), .black.opacity(0.3)]), startPoint: .top, endPoint: .bottom), lineWidth: 4)
-
+                        .fill(.cardBackgroundTextHeading)
+                        .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(1), .black.opacity(1)]), startPoint: .top, endPoint: .bottom).blendMode(.overlay), lineWidth: 4)
                         .strokeBorder(lineWidth: 1)
-                        .frame(width: .infinity, height: 32)
+                        .frame(width: 319, height: 32)
+                        .padding([.top, .bottom], 2)
+                        .padding([.leading, .trailing], 2)
                     
                         
                         
                     HStack {
                         Text(card.type)
-                            .font(.custom("Matrix", size: 18))
+                            .font(.custom("Matrix", size: 15))
                         
                         Spacer()
                         
-                        HStack (spacing: 0) {
-                            Image(systemName: "trophy.fill")
+                        HStack (spacing: 3) {
+                            Image("40k 2")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 25.0)
                         }
+                        .shadow(radius: 1)
+                        
+                        
                     }
-                    .padding([.all], 10)
+                    .frame(width: 300)
+                    
 
                 }
-                Text(card.text)
-                Text(card.flavorText ?? "")
+                
+
+                BodyView()
+                
+//                Text(card.text)
+//                Text(card.flavorText ?? "")
                 
             }
-            .padding()
+            
             
             
 
         }
         .navigationTitle(card.name)
         .navigationBarTitleDisplayMode(.inline)
+        .background(.black)
         
     }
 }
