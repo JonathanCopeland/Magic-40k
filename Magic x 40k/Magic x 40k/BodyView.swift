@@ -10,6 +10,12 @@ import SwiftUI
 struct BodyView: View {
     var body: some View {
         
+        // TODO: Use this code
+//        Text("Live long and prosper")
+//            .frame(width: 300, height: 300, alignment: .topLeading)
+//            .offset(x: 12, y: 12)
+//            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+//        
         ZStack {
             Rectangle()
                 .fill(.cardBorder)
