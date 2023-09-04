@@ -17,7 +17,7 @@ struct CardView: View {
         ScrollView {
             VStack (alignment: .center, spacing: 0) {
                 
-                frame_header()
+                HeaderView()
                 
                 ImageView()
             
@@ -44,13 +44,11 @@ struct CardView: View {
                         
                         Spacer()
                         
-                        HStack (spacing: 3) {
-                            Image("40k 2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height: 25.0)
-                        }
-                        .shadow(radius: 1)
+                        Image("40k 2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 25.0)
+                            .shadow(radius: 1)
                         
                         
                     }

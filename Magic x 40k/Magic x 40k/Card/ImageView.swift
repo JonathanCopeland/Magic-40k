@@ -13,7 +13,7 @@ struct ImageView: View {
         ZStack {
             Rectangle()
                 .fill(.cardBorder)
-                .frame(width: 313, height: 230)
+                .frame(width: 313, height: 206)
             
             Rectangle()
                 .foregroundColor(.clear)
@@ -21,13 +21,14 @@ struct ImageView: View {
                     Image("40k-9-and-they-shall-know-no-fear")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 305, height: 222)
+                        .frame(width: 307, height: 200)
                         .clipped()
                         .border(.black)
                         .padding(2)
                 )
                 
         }
+        .frame(width: 313, height: 206)
         
         
 

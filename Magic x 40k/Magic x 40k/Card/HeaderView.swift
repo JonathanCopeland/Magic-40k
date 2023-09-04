@@ -1,22 +1,23 @@
 //
-//  frame-header.swift
+//  HeaderView.swift
 //  Magic x 40k
 //
-//  Created by Jonathan Copeland on 24/06/2023.
+//  Created by Jonathan Copeland on 04/09/2023.
 //
 
 import SwiftUI
 
-struct frame_header: View {
+struct HeaderView: View {
     var body: some View {
         
         ZStack {
             
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerSize: CGSize(width: 10, height: 10), style: .continuous)
                 .fill(.cardBorder)
-                .frame(width: 323, height: 36)
+                .frame(width: 325, height: 37)
+//                .frame(width: 323, height: 36)
             
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
                 .fill(.cardBackgroundTextHeading)
                 .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(1), .black.opacity(1)]), startPoint: .top, endPoint: .bottom).blendMode(.overlay), lineWidth: 4)
                 .strokeBorder(lineWidth: 1)
@@ -44,7 +45,7 @@ struct frame_header: View {
                 
                 
             }
-            .frame(width: 300)
+            .frame(width: 300, height: 14)
             .padding([.all], 10)
 
         }
@@ -56,49 +57,5 @@ struct frame_header: View {
 }
 
 #Preview {
-    frame_header()
+    HeaderView()
 }
-
-
-
-/*
-.frame-header,
-.frame-type-line {
-    border-bottom: 4px solid #a9a9a9;
-    border-left: 2px solid #a9a9a9;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #fff;
-}
-
-.frame-header,
-.frame-art,
-.frame-type-line {
-    box-shadow:
-        0 0 0 2px #171314,
-        0 0 0 5px #26714A,
-        -3px 3px 2px 5px #171314;
-
-    margin-bottom: 7px;
-}
-
-.frame-header,
-.frame-type-line,
-.frame-text-box {
-    overflow: hidden;
-}
-
-.frame-header,
-.frame-type-line {
-    background:
-        linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ),
-        url(https://image.ibb.co/jKByZn/tile_bg_1.jpg);
-    display: flex;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 8px 0;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 18px/40px;
-}
-*/
