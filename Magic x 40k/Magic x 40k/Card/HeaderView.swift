@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HeaderView: View {
+    
+    let card: Card
+    
     var body: some View {
         
         ZStack {
@@ -15,7 +18,6 @@ struct HeaderView: View {
             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10), style: .continuous)
                 .fill(.cardBorder)
                 .frame(width: 325, height: 37)
-//                .frame(width: 323, height: 36)
             
             RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
                 .fill(.cardBackgroundTextHeading)
@@ -28,7 +30,7 @@ struct HeaderView: View {
                 
                 
             HStack {
-                Text("And They Shall Know No Fear")
+                Text(card.name)
                     .font(.custom("Matrix", size: 15))
                 
                 Spacer()
@@ -57,5 +59,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
+    HeaderView(card: universes.data.cards[0])
 }

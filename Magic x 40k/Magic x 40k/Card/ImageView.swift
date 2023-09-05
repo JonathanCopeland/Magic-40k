@@ -13,7 +13,7 @@ struct ImageView: View {
         ZStack {
             Rectangle()
                 .fill(.cardBorder)
-                .frame(width: 313, height: 206)
+                .frame(width: 313, height: 200)
             
             Rectangle()
                 .foregroundColor(.clear)
@@ -28,7 +28,7 @@ struct ImageView: View {
                 )
                 
         }
-        .frame(width: 313, height: 206)
+        .frame(width: 313, height: 200)
         
         
 

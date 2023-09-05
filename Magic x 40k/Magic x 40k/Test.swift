@@ -10,24 +10,25 @@ import SwiftUI
 struct Test: View {
     
     var body: some View {
+        
         ZStack {
-            Rectangle()
-                .fill(LinearGradient(gradient: Gradient(colors: [.white, .black]), startPoint: .top, endPoint: .bottom))
-                
-                
-                .frame(width: 380, height: 40)
-                
-            HStack {
-                Text("hello")
-                Spacer()
-                Text("hello")
-                
-            }
-            .padding()
             
- 
+            Rectangle()
+              .inset(by: 0.5)
+              .stroke(.black, lineWidth: 1)
+              .frame(width: 202, height: 198)
+            
+            Rectangle()
+              .foregroundColor(.clear)
+              .frame(width: 200, height: 198)
+              .background(.blue)
+            
+
         }
-        .padding()
+        
+        
+
+        
     }
 }
 

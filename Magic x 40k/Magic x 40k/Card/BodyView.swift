@@ -8,30 +8,27 @@
 import SwiftUI
 
 struct BodyView: View {
+    
+    let card: Card
+    
     var body: some View {
         
-        // TODO: Use this code
-//        Text("Live long and prosper")
-//            .frame(width: 300, height: 300, alignment: .topLeading)
-//            .offset(x: 12, y: 12)
-//            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
-//        
+
         ZStack {
             Rectangle()
                 .fill(.cardBorder)
-                .frame(width: 313, height: 164)
+                .frame(width: 311, height: 161)
                 
             
             VStack(alignment: .leading) {
-                Text("Choose a creature type. Creatures you control of the chosen type get +1/+0 and gain indestructible until end of turn.")
+                Text(card.text)
                     .font(.custom("Times New Roman", size: 15))
                     
+                if(card.flavorText != nil) {
+                    Divider()
+                }
                 
-                Divider()
-                
-                Text("""
-                     "They are my bulwark against the Terror. They are the Defenders of Humanity. They are my Space Marines." — The Emperor of Mankind
-                     """)
+                Text(card.flavorText ?? "")
                 .font(.custom("Times New Roman", size: 15))
                 .italic()
                 
@@ -54,5 +51,5 @@ struct BodyView: View {
 }
 
 #Preview {
-    BodyView()
+    BodyView(card: universes.data.cards[0])
 }

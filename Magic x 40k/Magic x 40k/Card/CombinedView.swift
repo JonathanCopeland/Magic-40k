@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct CombinedView: View {
+    let card : Card
+
     var body: some View {
-        ZStack {
+        ZStack (alignment: .top) {
             FrameView()
             VStack (alignment: .center, spacing: 0) {
-                HeaderView()
-                ImageView()
-                TypeView()
-                BodyView()
+                ZStack (alignment: .top) {
+                    ImageView()
+                        .padding(.top, 36)
+                    HeaderView(card: card)
+                }
+                
+                ZStack (alignment: .top) {
+                    BodyView(card: card)
+                        .padding(.top, 33)
+                    GapView()
+                    TypeView(card: card)
+                    
+                }
+
                 FooterView()
             }
-            .padding(.top, 9)
+            .padding(.top, 20)
             
             
         }
@@ -26,5 +38,5 @@ struct CombinedView: View {
 }
 
 #Preview {
-    CombinedView()
+    CombinedView(card: universes.data.cards[0])
 }

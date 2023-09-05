@@ -17,7 +17,7 @@ struct ContentView: View {
             List(universes.data.cards) { card in
                 if(card.finishes[0].rawValue == "nonfoil") {
                     NavigationLink {
-                        CardView(card: card)
+                        CombinedView(card: card)
                     } label: {
                         Text(card.name)
                     }

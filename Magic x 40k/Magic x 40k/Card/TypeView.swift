@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TypeView: View {
+    
+    let card : Card
+    
     var body: some View {
         ZStack {
             
@@ -26,7 +29,7 @@ struct TypeView: View {
                 
                 
             HStack {
-                Text("And They Shall Know No Fear")
+                Text(card.type)
                     .font(.custom("Matrix", size: 14))
                 
                 Spacer()
@@ -47,5 +50,5 @@ struct TypeView: View {
 }
 
 #Preview {
-    TypeView()
+    TypeView(card: universes.data.cards[0])
 }
