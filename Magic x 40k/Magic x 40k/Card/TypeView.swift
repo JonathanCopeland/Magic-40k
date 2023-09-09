@@ -34,11 +34,13 @@ struct TypeView: View {
                 
                 Spacer()
                 
-                Image("40k 2")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 25.0)
-                    .shadow(radius: 1)
+                RarityView(rarity: card.rarity.rawValue)
+
+                
+
+                    
+
+                    
                 
                 
             }

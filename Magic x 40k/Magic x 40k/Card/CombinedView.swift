@@ -7,15 +7,17 @@
 
 import SwiftUI
 
+
 struct CombinedView: View {
     let card : Card
 
     var body: some View {
+        
         ZStack (alignment: .top) {
             FrameView()
             VStack (alignment: .center, spacing: 0) {
                 ZStack (alignment: .top) {
-                    ImageView()
+                    ImageView(cardId: card.identifiers.scryfallID)
                         .padding(.top, 36)
                     HeaderView(card: card)
                 }
@@ -31,8 +33,6 @@ struct CombinedView: View {
                 FooterView()
             }
             .padding(.top, 20)
-            
-            
         }
     }
 }

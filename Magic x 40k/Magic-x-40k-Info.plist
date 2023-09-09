@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>keyrune.ttf</string>
 		<string>MatrixBold.ttf</string>
 	</array>
 </dict>

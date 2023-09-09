@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD077C792AACB46200B7E63B /* keyrune.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD077C782AACB46200B7E63B /* keyrune.ttf */; };
+		BD077C7D2AACC96300B7E63B /* RarityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD077C7C2AACC96300B7E63B /* RarityView.swift */; };
 		BD1CA1122A487581000B402B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA1112A487581000B402B /* ImageView.swift */; };
 		BD1CA1142A488807000B402B /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA1132A488807000B402B /* BodyView.swift */; };
 		BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */; };
@@ -16,7 +18,6 @@
 		BD663F622AA5C59E000A1115 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F612AA5C59E000A1115 /* FooterView.swift */; };
 		BD663F642AA5C5FD000A1115 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F632AA5C5FD000A1115 /* FrameView.swift */; };
 		BD663F662AA5C7CF000A1115 /* CombinedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F652AA5C7CF000A1115 /* CombinedView.swift */; };
-		BD663F682AA5C93C000A1115 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F672AA5C93C000A1115 /* TestView.swift */; };
 		BD663F6A2AA5CA17000A1115 /* TypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F692AA5CA17000A1115 /* TypeView.swift */; };
 		BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */; };
 		BD86E6482A3DB76800083CED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86E6472A3DB76800083CED /* ContentView.swift */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD077C782AACB46200B7E63B /* keyrune.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = keyrune.ttf; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Downloads/keyrune-master-2/fonts/keyrune.ttf"; sourceTree = "<group>"; };
+		BD077C7C2AACC96300B7E63B /* RarityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RarityView.swift; sourceTree = "<group>"; };
 		BD1CA1112A487581000B402B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BD1CA1132A488807000B402B /* BodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
 		BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatrixBold.ttf; sourceTree = "<group>"; };
@@ -38,7 +41,6 @@
 		BD663F612AA5C59E000A1115 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		BD663F632AA5C5FD000A1115 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		BD663F652AA5C7CF000A1115 /* CombinedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedView.swift; sourceTree = "<group>"; };
-		BD663F672AA5C93C000A1115 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		BD663F692AA5CA17000A1115 /* TypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeView.swift; sourceTree = "<group>"; };
 		BD86E6422A3DB76800083CED /* Magic x 40k.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic x 40k.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_x_40kApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		BD1FF0092A4790D200556CFE /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				BD077C782AACB46200B7E63B /* keyrune.ttf */,
 				BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */,
 			);
 			path = Font;
@@ -74,13 +77,13 @@
 			children = (
 				BD663F5F2AA5C599000A1115 /* HeaderView.swift */,
 				BD663F692AA5CA17000A1115 /* TypeView.swift */,
+				BD077C7C2AACC96300B7E63B /* RarityView.swift */,
 				BD1CA1112A487581000B402B /* ImageView.swift */,
 				BD1CA1132A488807000B402B /* BodyView.swift */,
 				BD4DE3A02AA726ED00B6F146 /* GapView.swift */,
 				BD663F612AA5C59E000A1115 /* FooterView.swift */,
 				BD663F632AA5C5FD000A1115 /* FrameView.swift */,
 				BD663F652AA5C7CF000A1115 /* CombinedView.swift */,
-				BD663F672AA5C93C000A1115 /* TestView.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */,
+				BD077C792AACB46200B7E63B /* keyrune.ttf in Resources */,
 				BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */,
 				BD86E64D2A3DB76A00083CED /* Preview Assets.xcassets in Resources */,
 				BD86E64A2A3DB76A00083CED /* Assets.xcassets in Resources */,
@@ -200,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD663F642AA5C5FD000A1115 /* FrameView.swift in Sources */,
+				BD077C7D2AACC96300B7E63B /* RarityView.swift in Sources */,
 				BD86E6482A3DB76800083CED /* ContentView.swift in Sources */,
 				BD1CA1142A488807000B402B /* BodyView.swift in Sources */,
 				BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */,
@@ -211,7 +216,6 @@
 				BD1CA1122A487581000B402B /* ImageView.swift in Sources */,
 				BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */,
 				BD663F622AA5C59E000A1115 /* FooterView.swift in Sources */,
-				BD663F682AA5C93C000A1115 /* TestView.swift in Sources */,
 				BD4DE3A12AA726ED00B6F146 /* GapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
