@@ -36,9 +36,8 @@ struct BodyView: View {
                 Spacer()
             }
             .padding(8)
-            .background(.cardBackgroundTextBody)
             .frame(width: 305, height: 156)
-            .padding(4)
+            .background(.cardBackgroundTextBody)
             
             
         }

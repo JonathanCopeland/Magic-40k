@@ -7,14 +7,18 @@
 
 import SwiftUI
 
+
 struct Test: View {
     
     
     var body: some View {
         
-        Text("Hello")
-            .font(.headline)
-            .foregroundStyle(.blue)
+        VStack {
+            Circle()
+                .union(.capsule.inset(by: 100))
+                .fill(.blue)
+
+        }
         
 
         

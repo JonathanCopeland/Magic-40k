@@ -48,8 +48,11 @@ struct ContentView: View {
                             VStack (alignment: .leading) {
                                 Text(card.name)
                                     .font(.headline)
-                                Text(card.subtypes.first ?? " ")
+                                Text(typeView(card: card))
                                     .foregroundColor(.secondary)
+                                
+
+
                             }
                             
                             Spacer()
@@ -84,6 +87,20 @@ struct ContentView: View {
         } else {
             return universes.data.cards.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         }
+    }
+    
+    func typeView(card: Card) -> String {
+
+        var type = ""
+        
+        for i in 0..<card.types.count {
+            type += card.types[i].rawValue + " "
+        }
+        
+        return type
+        
+        
+        
     }
     
 
