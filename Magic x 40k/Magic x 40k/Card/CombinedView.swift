@@ -17,7 +17,7 @@ struct CombinedView: View {
     var width: CGFloat = 340
     var height: CGFloat = 240
 
-    var intensity: CGFloat = 2
+    var intensity: CGFloat = 5
 
     // Generic Linear Scale
     func scale(inputMin: CGFloat, inputMax: CGFloat, outputMin: CGFloat, outputMax: CGFloat, value: CGFloat) -> CGFloat {
