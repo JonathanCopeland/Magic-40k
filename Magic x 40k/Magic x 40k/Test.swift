@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EllipticalShape: Shape {
+struct EllipticalShapeOuter: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         path.addRoundedRect(in: rect, cornerSize: CGSize(width: 9, height: 20))
@@ -15,13 +15,57 @@ struct EllipticalShape: Shape {
     }
 }
 
+struct EllipticalShapeInner: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 8, height: 15))
+        return path
+    }
+}
+
+struct EllipticalShapeInnerPlate: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 6, height: 19))
+        return path
+    }
+}
+
+
 struct Test: View {
     
+//    let gradient = AngularGradient(gradient: Gradient(colors: [.white, .black]), center: .center)
+    let gradient = AngularGradient(
+        gradient: Gradient(colors: [.black, .black, .black, .white, .white, .white]),
+        center: .center,
+        angle: .zero
+    )
+    
     var body: some View {
-        Rectangle()
-            .fill(.blue)
-            .frame(width: 325, height: 37)
-            .clipShape(EllipticalShape())
+
+        ZStack {
+            Rectangle()
+                .fill(.blue)
+                .frame(width: 325, height: 37)
+                .clipShape(EllipticalShapeOuter())
+            
+            Rectangle()
+                .fill(gradient)
+                .frame(width: 321, height: 34)
+                .clipShape(EllipticalShapeInner())
+            
+            
+            Rectangle()
+                .fill(.white)
+                .frame(width: 317, height: 30)
+                .clipShape(EllipticalShapeInnerPlate())
+            
+
+                
+        }
+        
+
+
     }
     
 }
@@ -31,16 +75,30 @@ struct Test: View {
 }
 
 
-
-
-//RoundedRectangle(cornerSize: CGSize(width: 10, height: 10), style: .continuous)
-//    .fill(.cardBorder)
-//    .frame(width: 325, height: 37)
 //
-//RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
-//    .fill(.cardBackgroundTextHeading)
-//    .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(1), .black.opacity(1)]), startPoint: .top, endPoint: .bottom).blendMode(.overlay), lineWidth: 4)
-//    .strokeBorder(lineWidth: 1)
-//    .frame(width: 319, height: 32)
-//    .padding([.top, .bottom], 2)
-//    .padding([.leading, .trailing], 2)
+//```swift
+//let gradient = AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue]), center: .center)
+//```
+//
+//2. **Attaching to a Rectangle:** You can attach this angular gradient to a rectangle as a fill. Here's how you can do that:
+//
+//```swift
+//Rectangle()
+//   .fill(gradient)
+//```
+//
+//So, putting it all together, here's how you can create a rectangle with an angular gradient:
+//
+//```swift
+//import SwiftUI
+//
+//struct ContentView: View {
+//    var body: some View {
+//        let gradient = AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue]), center: .center)
+//        
+//        return Rectangle()
+//            .fill(gradient)
+//            .frame(width: 200, height: 200)
+//   }
+//}
+//```
