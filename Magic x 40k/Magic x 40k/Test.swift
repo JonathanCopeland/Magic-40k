@@ -7,41 +7,22 @@
 
 import SwiftUI
 
-struct EllipticalShapeOuter: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 9, height: 20))
-        return path
-    }
-}
 
-struct EllipticalShapeInner: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 8, height: 15))
-        return path
-    }
-}
-
-struct EllipticalShapeInnerPlate: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 6, height: 19))
-        return path
-    }
-}
 
 
 struct Test: View {
-    
-//    let gradient = AngularGradient(gradient: Gradient(colors: [.white, .black]), center: .center)
-    let gradient = AngularGradient(
-        gradient: Gradient(colors: [.black, .black, .black, .white, .white, .white]),
-        center: .center,
-        angle: .zero
-    )
-    
+
     var body: some View {
+        
+        let customStops = [
+            Gradient.Stop(color: .white, location: 0),
+            Gradient.Stop(color: .black, location: 0.04),
+            Gradient.Stop(color: .black, location: 0.52),
+            Gradient.Stop(color: .white, location: 0.56),
+            Gradient.Stop(color: .white, location: 1),        ]
+
+        let gradient = Gradient(stops: customStops)
+        let shadowGradient = AngularGradient(gradient: gradient, center: .center, startAngle: .degrees(0), endAngle: .degrees(332))
 
         ZStack {
             Rectangle()
@@ -50,7 +31,7 @@ struct Test: View {
                 .clipShape(EllipticalShapeOuter())
             
             Rectangle()
-                .fill(gradient)
+                .fill(shadowGradient)
                 .frame(width: 321, height: 34)
                 .clipShape(EllipticalShapeInner())
             
@@ -59,10 +40,11 @@ struct Test: View {
                 .fill(.white)
                 .frame(width: 317, height: 30)
                 .clipShape(EllipticalShapeInnerPlate())
+        }
+        
             
 
-                
-        }
+
         
 
 
@@ -102,3 +84,4 @@ struct Test: View {
 //   }
 //}
 //```
+

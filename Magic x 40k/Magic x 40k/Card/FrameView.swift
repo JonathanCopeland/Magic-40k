@@ -22,7 +22,7 @@ struct FrameView: View {
                     
                 }
                 .frame(width: 330, height: 425)
-                .background(.blue)
+                .background(.cardBackground)
                 .clipShape(
                     .rect(
                         topLeadingRadius: 4,
