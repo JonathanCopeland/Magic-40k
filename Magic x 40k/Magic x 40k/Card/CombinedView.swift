@@ -31,22 +31,23 @@ struct CombinedView: View {
         VStack(alignment: .center) {
             ZStack (alignment: .top) {
                 FrameView()
-                    .shadow(radius: 40)
+                    .shadow(radius: 31)
                 
                 VStack (alignment: .center, spacing: 0) {
                     ZStack (alignment: .top) {
                         ImageView(cardId: card.identifiers.scryfallID)
-                            .padding(.top, 36)
+                            .padding(.top, 32)
                         HeaderView(card: card)
+                        
+                        ZStack (alignment: .top) {
+                            BodyView(card: card)
+                                .padding(.top, 30)
+                            TypeView(card: card)
+                        }
+                        .padding(.top, 229)
                     }
                     
-                    ZStack (alignment: .top) {
-                        BodyView(card: card)
-                            .padding(.top, 33)
-                        GapView()
-                        TypeView(card: card)
-                        
-                    }
+
 
                     FooterView()
                 }

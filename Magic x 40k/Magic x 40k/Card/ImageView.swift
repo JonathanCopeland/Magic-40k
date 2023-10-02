@@ -36,7 +36,7 @@ struct ImageView: View {
         ZStack {
             Rectangle()
                 .fill(.cardBorder)
-                .frame(width: 313, height: 200)
+                .frame(width: 316, height: 229)
             
             Rectangle()
                 .foregroundColor(.clear)
@@ -44,8 +44,8 @@ struct ImageView: View {
                     
                     AsyncImage(url: URL(string: defineURL())) { image in
                                 image.resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 307, height: 200)
+                            .aspectRatio(contentMode: .fit)
+                                .frame(width: 311, height: 229)
                                 .clipped()
                                 .border(.black)
                                 .padding(2)
@@ -56,7 +56,7 @@ struct ImageView: View {
             
                 
         }
-        .frame(width: 313, height: 200)
+        .frame(width: 316, height: 229)
         
         
 

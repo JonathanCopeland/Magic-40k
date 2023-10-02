@@ -10,7 +10,17 @@ import SwiftUI
 struct EllipticalShapeOuter: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 9, height: 20))
+        path.addRoundedRect(in: rect, cornerSize: CGSize(width:6, height: 20))
+        return path
+    }
+}
+
+
+// The black stroke border
+struct EllipticalShapeOuterStroke: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 5, height: 31))
         return path
     }
 }
@@ -18,7 +28,7 @@ struct EllipticalShapeOuter: Shape {
 struct EllipticalShapeInner: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 8, height: 15))
+        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 4, height: 28))
         return path
     }
 }
@@ -26,7 +36,7 @@ struct EllipticalShapeInner: Shape {
 struct EllipticalShapeInnerPlate: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 6, height: 19))
+        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 3, height: 24))
         return path
     }
 }
@@ -40,18 +50,8 @@ struct HeaderView: View {
         
         ZStack {
             
-//            RoundedRectangle(cornerSize: CGSize(width: 10, height: 10), style: .continuous)
-//                .fill(.cardBorder)
-//                .frame(width: 325, height: 37)
-//            
-//            RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
-//                .fill(.cardBackgroundTextHeading)
-//                .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(1), .black.opacity(1)]), startPoint: .top, endPoint: .bottom).blendMode(.overlay), lineWidth: 4)
-//                .strokeBorder(lineWidth: 1)
-//                .frame(width: 319, height: 32)
-//                .padding([.top, .bottom], 2)
-//                .padding([.leading, .trailing], 2)
-//            
+    
+            
             
             let customStops = [
                 Gradient.Stop(color: .white, location: 0),
@@ -70,32 +70,43 @@ struct HeaderView: View {
                 Gradient.Stop(color: .white, location: 0.56),
                 Gradient.Stop(color: .white, location: 1),        ]
 
-            let gradient2 = Gradient(stops: customStops)
-            let shadowGradient2 = AngularGradient(gradient: gradient, center: .center, startAngle: .degrees(0), endAngle: .degrees(332))
+            let gradient2 = Gradient(stops: customStops2)
+            let shadowGradient2 = AngularGradient(gradient: gradient2, center: .center, startAngle: .degrees(0), endAngle: .degrees(332))
+            
+            
+            // 327 / 34
+            // 323 / 30
+            // 321 / 28
+            // 317 / 24
             
             
             ZStack {
                 Rectangle()
                     .fill(.cardBorder)
-                    .frame(width: 325, height: 37)
+                    .frame(width: 325, height: 32)
                     .clipShape(EllipticalShapeOuter())
                 
                 Rectangle()
+                    .fill(.black)
+                    .frame(width: 321, height: 28)
+                    .clipShape(EllipticalShapeOuterStroke())
+                
+            
+                Rectangle()
                     .fill(shadowGradient)
-                    .frame(width: 321, height: 34)
+                    .frame(width: 319, height: 26)
                     .clipShape(EllipticalShapeInner()).opacity(0.3)
                     
                 
                 Rectangle()
                     .fill(shadowGradient2)
-                    .frame(width: 321, height: 34)
+                    .frame(width: 319, height: 26)
                     .clipShape(EllipticalShapeInner())
-                    .blendMode(.overlay)
                 
                 
                 Rectangle()
                     .fill(.cardBackgroundTextHeading)
-                    .frame(width: 317, height: 30)
+                    .frame(width: 315, height: 22)
                     .clipShape(EllipticalShapeInnerPlate())
             }
             
@@ -103,7 +114,8 @@ struct HeaderView: View {
                 
             HStack {
                 Text(card.name)
-                    .font(.custom("Matrix", size: 15))
+                    .font(.custom("Matrix", size: 19))
+                    .padding(.top, 2)
                 
                 Spacer()
                 
@@ -119,10 +131,12 @@ struct HeaderView: View {
                 
                 
             }
-            .frame(width: 300, height: 14)
+            .frame(width: 303, height: 14)
             .padding([.all], 10)
+            
 
         }
+
 
         
 

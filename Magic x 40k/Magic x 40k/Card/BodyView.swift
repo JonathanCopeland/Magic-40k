@@ -17,12 +17,13 @@ struct BodyView: View {
         ZStack {
             Rectangle()
                 .fill(.cardBorder)
-                .frame(width: 311, height: 161)
+                .frame(width: 316, height: 180)
                 
             
             VStack(alignment: .leading) {
                 Text(card.text)
-                    .font(.custom("Times New Roman", size: 15))
+                    .font(.custom("Times New Roman", size: 17))
+
                     
                 if(card.flavorText != nil) {
                     Divider()
@@ -35,8 +36,10 @@ struct BodyView: View {
                 
                 Spacer()
             }
-            .padding(8)
-            .frame(width: 305, height: 156)
+            .padding(.all, 2)
+            .padding(.top, 2)
+            .padding(.leading, 1)
+            .frame(width: 310, height: 180)
             .background(.cardBackgroundTextBody)
             
             
