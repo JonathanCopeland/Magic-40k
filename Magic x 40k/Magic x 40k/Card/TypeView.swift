@@ -81,7 +81,9 @@ struct TypeView: View {
             
             ZStack {
                 Rectangle()
-                    .fill(.cardBorder)
+                    .fill(
+                        LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
+                    )
                     .frame(width: 325, height: 30)
                     .clipShape(EllipticalShapeOuter2())
                 

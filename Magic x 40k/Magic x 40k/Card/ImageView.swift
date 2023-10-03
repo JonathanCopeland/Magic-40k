@@ -35,7 +35,9 @@ struct ImageView: View {
         
         ZStack {
             Rectangle()
-                .fill(.cardBorder)
+                .fill(
+                    LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
+                )
                 .frame(width: 316, height: 229)
             
             Rectangle()

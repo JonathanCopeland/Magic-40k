@@ -30,7 +30,7 @@ struct CombinedView: View {
         
         VStack(alignment: .center) {
             ZStack (alignment: .top) {
-                FrameView()
+                FrameView(card: card)
                     .shadow(radius: 31)
                 
                 VStack (alignment: .center, spacing: 0) {
@@ -52,6 +52,8 @@ struct CombinedView: View {
                     FooterView()
                 }
                 .padding(.top, 20)
+                
+
                 
             }
             
@@ -86,5 +88,5 @@ struct CombinedView: View {
 }
 
 #Preview {
-    CombinedView(card: universes.data.cards[0])
+    CombinedView(card: universes.data.cards[44])
 }

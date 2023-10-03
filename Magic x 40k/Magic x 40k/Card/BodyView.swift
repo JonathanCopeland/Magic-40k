@@ -16,7 +16,9 @@ struct BodyView: View {
 
         ZStack {
             Rectangle()
-                .fill(.cardBorder)
+                .fill(
+                    LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
+                )
                 .frame(width: 316, height: 180)
                 
             
@@ -40,7 +42,11 @@ struct BodyView: View {
             .padding(.top, 2)
             .padding(.leading, 1)
             .frame(width: 310, height: 180)
-            .background(.cardBackgroundTextBody)
+            .background(
+                LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
+                    .opacity(0.15)
+            )
+            .background(.white)
             
             
         }

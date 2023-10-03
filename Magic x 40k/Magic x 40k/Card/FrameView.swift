@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct FrameView: View {
+    
+    let card: Card
+    
     var body: some View {
+        
+        
+        
         ZStack (alignment: .top) {
+            
             VStack {
+                
+
                 VStack {
                     
-                    
+
                     
                     
                     Spacer()
@@ -22,7 +31,10 @@ struct FrameView: View {
                     
                 }
                 .frame(width: 330, height: 425)
-                .background(.cardBackground)
+                .background(
+                    Image(getBackground())
+                        .resizable()
+                )
                 .clipShape(
                     .rect(
                         topLeadingRadius: 4,
@@ -32,6 +44,7 @@ struct FrameView: View {
                     )
                 )
                 Spacer()
+                
             }
             .padding(16)
 
@@ -42,8 +55,35 @@ struct FrameView: View {
         .background(.black)
         .cornerRadius(12)
     }
+    
+    func getBackground() -> String {
+        
+        let values = card.colorIdentity
+                
+        if(values.count != 2) {
+            switch values.first?.rawValue {
+            case "B":
+                return "bgBlack"
+            case "W":
+                return "bgWhite"
+            case "R":
+                return "bgRed"
+            case "G":
+                return "bgGreen"
+            case "U":
+                return "bgBlue"
+            default:
+                return "artifact"
+            }
+        }
+        
+        
+        
+        return "bgBlue"
+    }
+    
 }
 
 #Preview {
-    FrameView()
+    FrameView(card: universes.data.cards[0])
 }

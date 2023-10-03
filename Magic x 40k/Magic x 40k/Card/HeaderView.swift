@@ -74,15 +74,12 @@ struct HeaderView: View {
             let shadowGradient2 = AngularGradient(gradient: gradient2, center: .center, startAngle: .degrees(0), endAngle: .degrees(332))
             
             
-            // 327 / 34
-            // 323 / 30
-            // 321 / 28
-            // 317 / 24
-            
             
             ZStack {
                 Rectangle()
-                    .fill(.cardBorder)
+                    .fill(
+                        LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
+                    )
                     .frame(width: 325, height: 32)
                     .clipShape(EllipticalShapeOuter())
                 
