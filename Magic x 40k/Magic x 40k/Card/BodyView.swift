@@ -14,7 +14,7 @@ struct BodyView: View {
     var body: some View {
         
 
-        ZStack {
+        ZStack (alignment: .top) {
             Rectangle()
                 .fill(
                     LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
@@ -41,7 +41,7 @@ struct BodyView: View {
             .padding(.all, 2)
             .padding(.top, 2)
             .padding(.leading, 1)
-            .frame(width: 310, height: 180)
+            .frame(width: 310, height: 177)
             .background(
                 LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
                     .opacity(0.15)

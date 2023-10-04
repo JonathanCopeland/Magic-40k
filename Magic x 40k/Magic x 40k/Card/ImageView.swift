@@ -74,6 +74,10 @@ struct ImageView: View {
         return combined
     }
     
+//    func setBorderColour() -> [Color] {
+//        return [.blueOuter, .blueInner, .blackOuter, .blackOuter]
+//    }
+    
 }
 
 #Preview {
