@@ -35,7 +35,7 @@ struct CombinedView: View {
                 
                 VStack (alignment: .center, spacing: 0) {
                     ZStack (alignment: .top) {
-                        ImageView(cardId: card.identifiers.scryfallID)
+                        ImageView(card: card)
                             .padding(.top, 32)
                         HeaderView(card: card)
                         

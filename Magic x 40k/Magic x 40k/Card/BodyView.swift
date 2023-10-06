@@ -15,10 +15,7 @@ struct BodyView: View {
         
 
         ZStack (alignment: .top) {
-            Rectangle()
-                .fill(
-                    LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
-                )
+            GradientFill(card: card)
                 .frame(width: 316, height: 180)
                 
             
@@ -42,10 +39,7 @@ struct BodyView: View {
             .padding(.top, 2)
             .padding(.leading, 1)
             .frame(width: 310, height: 177)
-            .background(
-                LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
-                    .opacity(0.15)
-            )
+            .modifier(BackgroundModifier())
             .background(.white)
             
             

@@ -29,15 +29,12 @@ extension BidirectionalCollection {
 
 struct ImageView: View {
     
-    let cardId : String
+    let card: Card
     
     var body: some View {
         
         ZStack {
-            Rectangle()
-                .fill(
-                    LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
-                )
+            GradientFill(card: card)
                 .frame(width: 316, height: 229)
             
             Rectangle()
@@ -67,9 +64,9 @@ struct ImageView: View {
     
     func defineURL() -> String {
         
-        let firstLetter = cardId[0].string
-        let secondLetter = cardId[1].string
-        let combined = "https://cards.scryfall.io/art_crop/front/" + firstLetter + "/" + secondLetter + "/" + cardId + ".jpg"
+        let firstLetter = card.identifiers.scryfallID[0].string
+        let secondLetter = card.identifiers.scryfallID[1].string
+        let combined = "https://cards.scryfall.io/art_crop/front/" + firstLetter + "/" + secondLetter + "/" + card.identifiers.scryfallID + ".jpg"
         
         return combined
     }
@@ -81,5 +78,5 @@ struct ImageView: View {
 }
 
 #Preview {
-    ImageView(cardId: universes.data.cards[0].identifiers.scryfallID)
+    ImageView(card: universes.data.cards[0])
 }

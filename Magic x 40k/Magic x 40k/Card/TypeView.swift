@@ -7,39 +7,6 @@
 
 import SwiftUI
 
-struct EllipticalShapeOuter2: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width:6, height: 20))
-        return path
-    }
-}
-
-
-// The black stroke border
-struct EllipticalShapeOuterStroke2: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 5, height: 31))
-        return path
-    }
-}
-
-struct EllipticalShapeInner2: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 4, height: 28))
-        return path
-    }
-}
-
-struct EllipticalShapeInnerPlate2: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.addRoundedRect(in: rect, cornerSize: CGSize(width: 3, height: 24))
-        return path
-    }
-}
 
 struct TypeView: View {
     
@@ -50,40 +17,9 @@ struct TypeView: View {
         
         ZStack {
             
-    
-            
-            
-            let customStops = [
-                Gradient.Stop(color: .white, location: 0),
-                Gradient.Stop(color: .black, location: 0.04),
-                Gradient.Stop(color: .black, location: 0.52),
-                Gradient.Stop(color: .white, location: 0.56),
-                Gradient.Stop(color: .white, location: 1),        ]
 
-            let gradient = Gradient(stops: customStops)
-            let shadowGradient = AngularGradient(gradient: gradient, center: .center, startAngle: .degrees(0), endAngle: .degrees(332))
-
-            let customStops2 = [
-                Gradient.Stop(color: .white, location: 0),
-                Gradient.Stop(color: .black.opacity(0), location: 0.04),
-                Gradient.Stop(color: .black.opacity(0), location: 0.52),
-                Gradient.Stop(color: .white, location: 0.56),
-                Gradient.Stop(color: .white, location: 1),        ]
-
-            let gradient2 = Gradient(stops: customStops2)
-            let shadowGradient2 = AngularGradient(gradient: gradient2, center: .center, startAngle: .degrees(0), endAngle: .degrees(332))
-            
-            
-            // 325 / 30
-            // 323 / 28
-            // 321 / 26
-            // 318 / 23
-            
             ZStack {
-                Rectangle()
-                    .fill(
-                        LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
-                    )
+                GradientFill(card: card)
                     .frame(width: 325, height: 30)
                     .clipShape(EllipticalShapeOuter2())
                 
@@ -94,13 +30,13 @@ struct TypeView: View {
                 
                 
                 Rectangle()
-                    .fill(shadowGradient)
+                    .fill(ShadowViews.init().shadowGradient)
                     .frame(width: 319, height: 24)
                     .clipShape(EllipticalShapeInner2()).opacity(0.3)
                     
                 
                 Rectangle()
-                    .fill(shadowGradient2)
+                    .fill(ShadowViews.init().shadowGradient2)
                     .frame(width: 319, height: 24)
                     .clipShape(EllipticalShapeInner2())
                 
@@ -131,8 +67,6 @@ struct TypeView: View {
 
         }
 
-
-        
 
     }
         
