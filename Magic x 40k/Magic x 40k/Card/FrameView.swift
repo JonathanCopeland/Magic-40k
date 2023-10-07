@@ -59,6 +59,13 @@ struct FrameView: View {
     func getBackground() -> String {
         
         let values = card.colorIdentity
+        
+        
+        if(values.count == 3) {
+            return "gold"
+        }
+        
+        
                 
         if(values.count != 2) {
             switch values.first?.rawValue {

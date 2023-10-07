@@ -44,8 +44,16 @@ struct CombinedView: View {
                                 .padding(.top, 30)
                             TypeView(card: card)
                         }
+                        
                         .padding(.top, 229)
                     }
+                    .compositingGroup()
+                    .shadow(
+                        color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.7),
+                        radius: 1,
+                        x: -2,
+                        y:  1
+                    )
                     
 
 

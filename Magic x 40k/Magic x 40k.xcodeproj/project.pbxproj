@@ -113,11 +113,11 @@
 			isa = PBXGroup;
 			children = (
 				BD1FF00C2A47916300556CFE /* Magic-x-40k-Info.plist */,
+				BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */,
 				BD1FF0092A4790D200556CFE /* Font */,
 				BDB042AD2ACFF71C000FD971 /* ComputedProperties */,
 				BDB042A72ACFF34A000FD971 /* Modifiers */,
 				BD663F5A2AA5C455000A1115 /* Card */,
-				BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */,
 				BD86E6472A3DB76800083CED /* ContentView.swift */,
 				BD4643642A4762B1009C0800 /* Test.swift */,
 				BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */,

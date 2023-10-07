@@ -37,6 +37,8 @@ struct ImageView: View {
             GradientFill(card: card)
                 .frame(width: 316, height: 229)
             
+            ProgressView()
+            
             Rectangle()
                 .foregroundColor(.clear)
                 .background(

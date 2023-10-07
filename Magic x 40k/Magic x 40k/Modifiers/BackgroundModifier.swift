@@ -11,7 +11,7 @@ struct BackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background(
-                LinearGradient(colors: [.blueOuter, .blueInner, .blackOuter, .blackOuter], startPoint: .leading, endPoint: .trailing)
+                LinearGradient(colors: [.ubBlueOuter, .ubBlueInner, .ubBlackOuter, .ubBlackOuter], startPoint: .leading, endPoint: .trailing)
                     .opacity(0.15)
             )
             
