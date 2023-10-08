@@ -36,28 +36,22 @@ struct ImageView: View {
         ZStack {
             GradientFill(card: card)
                 .frame(width: 316, height: 229)
-            
-            ProgressView()
-            
+                        
             Rectangle()
                 .foregroundColor(.clear)
                 .background(
-                    
                     AsyncImage(url: URL(string: defineURL())) { image in
                                 image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                                .frame(width: 311, height: 229)
+                            .aspectRatio(contentMode: .fill)
+                                .frame(width: 311, height: 227)
                                 .clipped()
                                 .border(.black)
-                                .padding(2)
                             } placeholder: {
                                 ProgressView()
                             }
                 )
-            
-                
         }
-        .frame(width: 316, height: 229)
+        .frame(width: 316, height: 227)
         
         
 
@@ -73,12 +67,9 @@ struct ImageView: View {
         return combined
     }
     
-//    func setBorderColour() -> [Color] {
-//        return [.blueOuter, .blueInner, .blackOuter, .blackOuter]
-//    }
     
 }
 
 #Preview {
-    ImageView(card: universes.data.cards[0])
+    ImageView(card: universes.data.cards[24])
 }

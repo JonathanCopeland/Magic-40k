@@ -41,7 +41,7 @@ struct HeaderView: View {
                 Rectangle()
                     .fill(ShadowViews.init().shadowGradient)
                     .frame(width: 319, height: 26)
-                    .clipShape(EllipticalShapeInner()).opacity(0.3)
+                    .clipShape(EllipticalShapeInner()).opacity(0.5)
                     
                 
                 Rectangle()

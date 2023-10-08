@@ -28,17 +28,22 @@ struct TypeView: View {
                     .frame(width: 321, height: 26)
                     .clipShape(EllipticalShapeOuterStroke2())
                 
+                Rectangle()
+                    .fill(getColors())
+                    .frame(width: 319, height: 24)
+                    .clipShape(EllipticalShapeInner())
+                
                 
                 Rectangle()
                     .fill(ShadowViews.init().shadowGradient)
                     .frame(width: 319, height: 24)
-                    .clipShape(EllipticalShapeInner2()).opacity(0.3)
+                    .clipShape(EllipticalShapeInner2()).opacity(0.5)
                     
                 
                 Rectangle()
                     .fill(ShadowViews.init().shadowGradient2)
                     .frame(width: 319, height: 24)
-                    .clipShape(EllipticalShapeInner2())
+                    .clipShape(EllipticalShapeInner2()).opacity(0.1)
                 
                 
                 Rectangle()

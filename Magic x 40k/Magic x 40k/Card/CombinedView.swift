@@ -36,24 +36,34 @@ struct CombinedView: View {
                 VStack (alignment: .center, spacing: 0) {
                     ZStack (alignment: .top) {
                         ImageView(card: card)
-                            .padding(.top, 32)
+                            .padding(.top, 33)
                         HeaderView(card: card)
                         
                         ZStack (alignment: .top) {
-                            BodyView(card: card)
-                                .padding(.top, 30)
                             TypeView(card: card)
+                                .padding(.top, 29)
+                            BodyView(card: card)
+                                .padding(.top, 60.9)
+                            
                         }
                         
                         .padding(.top, 229)
                     }
                     .compositingGroup()
+                    
                     .shadow(
                         color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.7),
-                        radius: 1,
+                        radius: 0.4,
                         x: -2,
                         y:  1
                     )
+                    .shadow(
+                        color: .white.opacity(0.3),
+                        radius: 0.4,
+                        x: 2,
+                        y:  -1.5
+                    )
+                    
                     
 
 
@@ -98,3 +108,4 @@ struct CombinedView: View {
 #Preview {
     CombinedView(card: universes.data.cards[44])
 }
+
