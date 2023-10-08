@@ -39,7 +39,7 @@ struct BodyView: View {
             .padding(.top, 2)
             .padding(.leading, 1)
             .frame(width: 310, height: 177)
-            .modifier(BackgroundModifier())
+            .modifier(BackgroundModifier(card: card))
             .background(.white)
             
             

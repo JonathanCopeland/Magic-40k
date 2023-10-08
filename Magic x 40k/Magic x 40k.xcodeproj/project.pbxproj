@@ -26,6 +26,7 @@
 		BDB042A62ACFF24F000FD971 /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB042A52ACFF24F000FD971 /* BackgroundModifier.swift */; };
 		BDB042A92ACFF42D000FD971 /* EllipticalShapeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB042A82ACFF42D000FD971 /* EllipticalShapeViews.swift */; };
 		BDB042AB2ACFF492000FD971 /* ShadowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB042AA2ACFF492000FD971 /* ShadowViews.swift */; };
+		BDDC02CB2AD2E88D0063796A /* ManaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC02CA2AD2E88D0063796A /* ManaView.swift */; };
 		BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */ = {isa = PBXBuildFile; fileRef = BDDE3EB32A3F7421003F6F81 /* 40k.json */; };
 		BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */; };
 		BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */; };
@@ -53,6 +54,7 @@
 		BDB042A52ACFF24F000FD971 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
 		BDB042A82ACFF42D000FD971 /* EllipticalShapeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticalShapeViews.swift; sourceTree = "<group>"; };
 		BDB042AA2ACFF492000FD971 /* ShadowViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowViews.swift; sourceTree = "<group>"; };
+		BDDC02CA2AD2E88D0063796A /* ManaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManaView.swift; sourceTree = "<group>"; };
 		BDDE3EB32A3F7421003F6F81 /* 40k.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 40k.json; sourceTree = "<group>"; };
 		BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversesBeyond.swift; sourceTree = "<group>"; };
 		BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				BD663F5F2AA5C599000A1115 /* HeaderView.swift */,
+				BDDC02CA2AD2E88D0063796A /* ManaView.swift */,
 				BD663F692AA5CA17000A1115 /* TypeView.swift */,
 				BD077C7C2AACC96300B7E63B /* RarityView.swift */,
 				BD1CA1112A487581000B402B /* ImageView.swift */,
@@ -232,6 +235,7 @@
 				BD663F642AA5C5FD000A1115 /* FrameView.swift in Sources */,
 				BD077C7D2AACC96300B7E63B /* RarityView.swift in Sources */,
 				BD86E6482A3DB76800083CED /* ContentView.swift in Sources */,
+				BDDC02CB2AD2E88D0063796A /* ManaView.swift in Sources */,
 				BD1CA1142A488807000B402B /* BodyView.swift in Sources */,
 				BDB042AB2ACFF492000FD971 /* ShadowViews.swift in Sources */,
 				BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */,

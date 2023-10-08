@@ -61,7 +61,7 @@ struct FrameView: View {
         let values = card.colorIdentity
         
         
-        if(values.count == 3) {
+        if(values.count == 3 || values.count == 2) {
             return "gold"
         }
         

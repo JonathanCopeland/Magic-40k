@@ -34,6 +34,11 @@ struct HeaderView: View {
                 
             
                 Rectangle()
+                    .fill(getColors())
+                    .frame(width: 319, height: 26)
+                    .clipShape(EllipticalShapeInner())
+                
+                Rectangle()
                     .fill(ShadowViews.init().shadowGradient)
                     .frame(width: 319, height: 26)
                     .clipShape(EllipticalShapeInner()).opacity(0.3)
@@ -42,11 +47,11 @@ struct HeaderView: View {
                 Rectangle()
                     .fill(ShadowViews.init().shadowGradient2)
                     .frame(width: 319, height: 26)
-                    .clipShape(EllipticalShapeInner())
+                    .clipShape(EllipticalShapeInner()).opacity(0.1)
                 
                 
                 Rectangle()
-                    .fill(.cardBackgroundTextHeading)
+                    .fill(getColors())
                     .frame(width: 315, height: 22)
                     .clipShape(EllipticalShapeInnerPlate())
             }
@@ -60,15 +65,7 @@ struct HeaderView: View {
                 
                 Spacer()
                 
-                HStack (spacing: 3) {
-                    Image("1")
-                        .resizable()
-                        .frame(width: 14.0, height: 14.0)
-                    Image("W")
-                        .resizable()
-                        .frame(width: 14.0, height: 14.0)
-                }
-                .shadow(radius: 1)
+                ManaView(card: card)
                 
                 
             }
@@ -81,6 +78,38 @@ struct HeaderView: View {
 
         
 
+    }
+    
+    func getColors() -> SwiftUI.Color {
+        
+        if(card.colors.count == 3 || card.colors.count == 2) {
+            return .singleLightGold
+        }
+        
+        if(card.colors.count == 1) {
+            if(card.colors.first?.rawValue == "B") {
+                return .singleLightBlack
+            }
+            else if (card.colors.first?.rawValue == "W") {
+                return .singleLightWhite
+            }
+            else if (card.colors.first?.rawValue == "U") {
+                return .singleLightBlue
+            }
+            else if (card.colors.first?.rawValue == "R") {
+                return .singleLightRed
+            }
+            else if (card.colors.first?.rawValue == "G") {
+                return .singleLightGreen
+            }
+        }
+        
+        if(card.colors.isEmpty) {
+            return .singleLightLand
+        }
+        
+        return .singleLightArtifact
+        
     }
     
     

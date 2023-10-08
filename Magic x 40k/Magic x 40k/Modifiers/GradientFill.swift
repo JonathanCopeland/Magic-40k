@@ -51,8 +51,8 @@ struct GradientFill: View {
             else if(card.colors.first?.rawValue == "B" && card.colors.last?.rawValue == "R") {
                 return [.brBlackOuter, .brBlackInner, .brRedInner, .brRedOuter]
             }
-            else if(card.colors.first?.rawValue == "B" && card.colors.last?.rawValue == "W") {
-                return [.bgGreenOuter, .bgGreenInner, .bgBlackInner, .bgBlackOuter]
+            else if(card.colors.first?.rawValue == "B" && card.colors.last?.rawValue == "G") {
+                return [.bgBlackOuter, .bgBlackInner, .bgGreenInner, .bgGreenOuter]
             }
             else if(card.colors.first?.rawValue == "U" && card.colors.last?.rawValue == "R") {
                 return [.urBlueOuter, .urBlueInner, .urRedInner, .urRedOuter]

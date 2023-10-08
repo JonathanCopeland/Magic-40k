@@ -42,7 +42,7 @@ struct TypeView: View {
                 
                 
                 Rectangle()
-                    .fill(.cardBackgroundTextHeading)
+                    .fill(getColors())
                     .frame(width: 316, height: 21)
                     .clipShape(EllipticalShapeInnerPlate2())
             }
@@ -68,6 +68,38 @@ struct TypeView: View {
         }
 
 
+    }
+    
+    func getColors() -> SwiftUI.Color {
+        
+        if(card.colors.count == 3 || card.colors.count == 2) {
+            return .singleLightGold
+        }
+        
+        if(card.colors.count == 1) {
+            if(card.colors.first?.rawValue == "B") {
+                return .singleLightBlack
+            }
+            else if (card.colors.first?.rawValue == "W") {
+                return .singleLightWhite
+            }
+            else if (card.colors.first?.rawValue == "U") {
+                return .singleLightBlue
+            }
+            else if (card.colors.first?.rawValue == "R") {
+                return .singleLightRed
+            }
+            else if (card.colors.first?.rawValue == "G") {
+                return .singleLightGreen
+            }
+        }
+        
+        if(card.colors.isEmpty) {
+            return .singleLightLand
+        }
+        
+        return .singleLightArtifact
+        
     }
         
 }
