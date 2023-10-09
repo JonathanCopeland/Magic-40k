@@ -22,7 +22,8 @@ struct BodyView: View {
             
             VStack(alignment: .leading) {
                 Text(card.text)
-                    .font(.custom("Times New Roman", size: 15))
+                    .font(.custom("Times New Roman", size: 14))                
+
 
                     
                 if(card.flavorText != nil) {
@@ -30,7 +31,7 @@ struct BodyView: View {
                 }
                 
                 Text(card.flavorText ?? "")
-                .font(.custom("Times New Roman", size: 15))
+                .font(.custom("Times New Roman", size: 14))
                 .italic()
                 
                 
@@ -59,7 +60,16 @@ struct BodyView: View {
                 .padding(.top, -2)
 
                 
-            
+            VStack {}
+            .frame(width: 310, height: 150)
+            .background(
+                Image(getBGBackground())
+                    .opacity(0.2)
+                    .blendMode(.softLight)
+            )
+            .clipShape(
+                EllipticalShapeInnerPlate()
+            )
             
         }
 
@@ -68,8 +78,45 @@ struct BodyView: View {
   
 
     }
+    
+    
+    func getBGBackground() -> String {
+        
+        let values = card.colorIdentity
+        
+        
+        if(values.count == 3 || values.count == 2) {
+            return "gold"
+        }
+        
+        
+                
+        if(values.count != 2) {
+            switch values.first?.rawValue {
+            case "B":
+                return "bgBlack"
+            case "W":
+                return "bgWhite"
+            case "R":
+                return "bgRed"
+            case "G":
+                return "bgGreen"
+            case "U":
+                return "bgBlue"
+            default:
+                return "artifact"
+            }
+        }
+        
+        
+        
+        return "bgBlue"
+    }
+    
+
+    
 }
 
 #Preview {
-    BodyView(card: universes.data.cards[0])
+    BodyView(card: universes.data.cards[7])
 }

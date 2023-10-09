@@ -27,6 +27,7 @@ struct HeaderView: View {
                     .frame(width: 325, height: 32)
                     .clipShape(EllipticalShapeOuter())
                 
+                
                 Rectangle()
                     .fill(.black)
                     .frame(width: 321, height: 28)
@@ -54,13 +55,26 @@ struct HeaderView: View {
                     .fill(getColors())
                     .frame(width: 315, height: 22)
                     .clipShape(EllipticalShapeInnerPlate())
+                
+                
+                VStack {}
+                .frame(width: 319, height: 26)
+                .background(
+                    Image(getBGBackground())
+                        .opacity(0.4)
+                        .blendMode(.softLight)
+                )
+                .clipShape(
+                    EllipticalShapeInnerPlate()
+                )
+                    
             }
             
                 
                 
             HStack {
                 Text(card.name)
-                    .font(.custom("Matrix", size: 19))
+                    .font(.custom("Matrix", size: 19.5))
                     .padding(.top, 2)
                 
                 Spacer()
@@ -111,6 +125,41 @@ struct HeaderView: View {
         return .singleLightArtifact
         
     }
+    
+    func getBGBackground() -> String {
+        
+        let values = card.colorIdentity
+        
+        
+        if(values.count == 3 || values.count == 2) {
+            return "gold"
+        }
+        
+        
+                
+        if(values.count != 2) {
+            switch values.first?.rawValue {
+            case "B":
+                return "bgBlack"
+            case "W":
+                return "bgWhite"
+            case "R":
+                return "bgRed"
+            case "G":
+                return "bgGreen"
+            case "U":
+                return "bgBlue"
+            default:
+                return "artifact"
+            }
+        }
+        
+        
+        
+        return "bgBlue"
+    }
+    
+    
     
     
 

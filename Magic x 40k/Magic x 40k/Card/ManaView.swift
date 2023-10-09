@@ -24,7 +24,7 @@ struct ManaView: View {
                 ForEach(0 ..< array.count, id: \.self) { i in
                     Image("\(array[i])")
                         .resizable()
-                        .frame(width: 16.0, height: 16.0)
+                        .frame(width: 16.5, height: 16.5)
                         .shadow(
                             color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(1),
                             radius: 0,

@@ -33,10 +33,25 @@ struct CombinedView: View {
                 FrameView(card: card)
                     .shadow(radius: 31)
                 
+                
+                
+
+                
+
+                
                 VStack (alignment: .center, spacing: 0) {
                     ZStack (alignment: .top) {
                         ImageView(card: card)
                             .padding(.top, 33)
+                        
+                        // Add legendary crest here
+//                        Image("unnamed-6")
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                            .frame(width: 365)
+//                            .padding(.top, -23)
+//
+                        
                         HeaderView(card: card)
                         
                         ZStack (alignment: .top) {
@@ -50,7 +65,6 @@ struct CombinedView: View {
                         .padding(.top, 229)
                     }
                     .compositingGroup()
-                    
                     .shadow(
                         color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.7),
                         radius: 0.4,
@@ -66,7 +80,7 @@ struct CombinedView: View {
                     
                     
 
-
+                    
                     FooterView()
                 }
                 .padding(.top, 20)
@@ -106,6 +120,6 @@ struct CombinedView: View {
 }
 
 #Preview {
-    CombinedView(card: universes.data.cards[44])
+    CombinedView(card: universes.data.cards[1])
 }
 

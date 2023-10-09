@@ -50,13 +50,24 @@ struct TypeView: View {
                     .fill(getColors())
                     .frame(width: 316, height: 21)
                     .clipShape(EllipticalShapeInnerPlate2())
+                
+                VStack {}
+                .frame(width: 319, height: 24)
+                .background(
+                    Image(getBGBackground())
+                        .opacity(0.4)
+                        .blendMode(.softLight)
+                )
+                .clipShape(
+                    EllipticalShapeInnerPlate()
+                )
             }
             
                 
                 
             HStack {
                 Text(card.type)
-                    .font(.custom("Matrix", size: 16))
+                    .font(.custom("Matrix", size: 16.5))
                     .padding(.top, 2)
                 
                 Spacer()
@@ -105,6 +116,39 @@ struct TypeView: View {
         
         return .singleLightArtifact
         
+    }
+    
+    func getBGBackground() -> String {
+        
+        let values = card.colorIdentity
+        
+        
+        if(values.count == 3 || values.count == 2) {
+            return "gold"
+        }
+        
+        
+                
+        if(values.count != 2) {
+            switch values.first?.rawValue {
+            case "B":
+                return "bgBlack"
+            case "W":
+                return "bgWhite"
+            case "R":
+                return "bgRed"
+            case "G":
+                return "bgGreen"
+            case "U":
+                return "bgBlue"
+            default:
+                return "artifact"
+            }
+        }
+        
+        
+        
+        return "bgBlue"
     }
         
 }
