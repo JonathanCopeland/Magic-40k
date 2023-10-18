@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct StringModify: View {
+    let superOriginalText = "Flying\nEnmitic Exterminator -- When Lokhust Heavy Destroyer enters the battlefield, each player sacrifices a creature. Unearth {5}{B}{B}{B} ({5}{B}{B}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+    
     let originalText = "Enmitic Exterminator -- When Lokhust Heavy Destroyer enters the battlefield, each player sacrifices a creature. Unearth {5}{B}{B}{B} ({5}{B}{B}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
     
     let originalText2 = "Destroy all creatures. They can't be regenerated. Draw a card for each creature destroyed this way.\nCycling {3}{B}{B} ({3}{B}{B}, Discard this card: Draw a card.)\nWhen you cycle Decree of Pain, all creatures get -2/-2 until end of turn."
@@ -17,49 +19,72 @@ struct StringModify: View {
     
     var body: some View {
 
-        Text(scrubString())
+        scrubString()
         
     }
     
-    func scrubString() -> String {
+    func scrubString() -> some View {
         
-        let originalString = originalText3
+        let originalString = superOriginalText
         
+        // Create a string to hold the value
         var rawSubStringArray : [String.SubSequence] = [""]
-        var rawSubStringArray2 : [String.SubSequence] = [""]
+        var rawStringArray : [String] = [""]
         
+        var rawSubStringArrayTEST : [String.SubSequence] = [""]
+
+        var rawStringArrayTEST : [String] = [""]
         
-        if(originalString.contains("\n")) {
-            
-            rawSubStringArray = originalString.split(separator: "\n")
-            let rawStringArray = rawSubStringArray.map { String($0) }
-            
-            rawStringArray.forEach {
-                
-                if($0.contains("--")) {
-                    
-                    rawSubStringArray2 = $0.split(separator: "--")
-                    let rawStringArray2 = rawSubStringArray2.map { String($0) }
-                    
-                }
-                
+        // Split based on \n
+        originalString.forEach { element in
+            if(originalString.contains("\n")) {
+                rawSubStringArray = originalString.split(separator: "\n")
+                rawStringArray = rawSubStringArray.map { String($0) }
             }
-            
-
-            
         }
-        else if (originalText.contains("--")) {
-            rawSubStringArray = originalText.split(separator: "--")
-            let rawStringArray = rawSubStringArray.map { String($0) }
+
+        
+        // Split based on --
+        rawStringArray.forEach { element in
+            if (element.contains("--")) {
+                rawSubStringArrayTEST = element.split(separator: "--")
+                rawStringArrayTEST = rawSubStringArrayTEST.map { String($0) }
+            }
         }
         
         
-
-        if let firstItem = rawSubStringArray.first {
-            return String(firstItem)
-        } else {
-            return ""
+        
+//        // Combine 2.1 and 2.2 with a -- in the middle
+//        var superString  = HStack {
+//            
+//            Text(rawStringArrayTEST.first ?? "")
+//                .italic()
+//            Text(" -- ")
+//            Text(rawStringArrayTEST.last ?? "")
+//                        
+//        }
+//            
+//        // Combine 1 and 2
+//
+//        var superStringTEST = HStack {
+//            Text(rawStringArray.first ?? "")
+//            superString
+//        }
+        
+        
+        // TEST
+        var superString  = HStack {
+            Text(rawStringArray.first ?? "") +
+            Text("\n") +
+            Text(rawStringArrayTEST.first ?? "")
+                .italic() +
+            Text(" -- ") +
+            Text(rawStringArrayTEST.last ?? "")
+                        
         }
+        
+        
+        return superString
   
     }
 
@@ -149,9 +174,7 @@ struct StringModify: View {
  }
  
 
- 
- // To figure out: I'm not actually sure these strings come with '/n', however they do have a new line
- 
+  
  
  
  
@@ -172,3 +195,9 @@ struct StringModify: View {
  }
  
  */
+
+
+//else if (originalText.contains("--")) {
+//    rawSubStringArray = originalText.split(separator: "--")
+//    let rawStringArray = rawSubStringArray.map { String($0) }
+//}
