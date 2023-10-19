@@ -23,6 +23,7 @@ struct ContentView: View {
     @State private var searchText = ""
     @State private var sortType = SortType.default
     @State private var showingSortOptions = false
+    @State private var showingTextView = false
     
     var sortedCards: [Card] {
         switch sortType {
@@ -71,12 +72,22 @@ struct ContentView: View {
                 } label: {
                     Label("Change sort order", systemImage: "arrow.up.arrow.down")
                 }
+                
+                Button {
+                    showingTextView = true
+                } label: {
+                    Label("View text", systemImage: "doc.text")
+                }
             }
             .confirmationDialog("Sort order", isPresented: $showingSortOptions) {
                 Button("Default") { sortType = .default }
                 Button("Alphabetical") { sortType = .alphabetical }
                 Button("Rarity") { sortType = .rarity }
             }
+            .sheet(isPresented: $showingTextView, content: {
+                StringModify()
+            })
+            
 
         }
     }

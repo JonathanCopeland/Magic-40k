@@ -24,69 +24,32 @@ struct StringModify: View {
     }
     
     func scrubString() -> some View {
+ 
         
-        let originalString = superOriginalText
-        
-        // Create a string to hold the value
-        var rawSubStringArray : [String.SubSequence] = [""]
-        var rawStringArray : [String] = [""]
-        
-        var rawSubStringArrayTEST : [String.SubSequence] = [""]
-
-        var rawStringArrayTEST : [String] = [""]
-        
-        // Split based on \n
-        originalString.forEach { element in
-            if(originalString.contains("\n")) {
-                rawSubStringArray = originalString.split(separator: "\n")
-                rawStringArray = rawSubStringArray.map { String($0) }
-            }
+        return HStack{
+    
+            Text(splitString(input: superOriginalText)[0])
         }
-
-        
-        // Split based on --
-        rawStringArray.forEach { element in
-            if (element.contains("--")) {
-                rawSubStringArrayTEST = element.split(separator: "--")
-                rawStringArrayTEST = rawSubStringArrayTEST.map { String($0) }
-            }
-        }
-        
-        
-        
-//        // Combine 2.1 and 2.2 with a -- in the middle
-//        var superString  = HStack {
-//            
-//            Text(rawStringArrayTEST.first ?? "")
-//                .italic()
-//            Text(" -- ")
-//            Text(rawStringArrayTEST.last ?? "")
-//                        
-//        }
-//            
-//        // Combine 1 and 2
-//
-//        var superStringTEST = HStack {
-//            Text(rawStringArray.first ?? "")
-//            superString
-//        }
-        
-        
-        // TEST
-        var superString  = HStack {
-            Text(rawStringArray.first ?? "") +
-            Text("\n") +
-            Text(rawStringArrayTEST.first ?? "")
-                .italic() +
-            Text(" -- ") +
-            Text(rawStringArrayTEST.last ?? "")
-                        
-        }
-        
-        
-        return superString
   
     }
+    
+    func splitString(input: String) -> [String] {
+        do {
+            let regex = try NSRegularExpression(pattern: "(Flying)|(\n)|( -- )")
+            let nsString = input as NSString
+            let matches = regex.matches(in: input, options: [], range: NSRange(location: 0, length: nsString.length))
+            let parts: [String] = matches.map { result in
+                let range = result.range
+                return nsString.substring(with: range)
+            }
+            return parts
+        } catch {
+            print("Invalid regex pattern")
+            return []
+        }
+    }
+    
+
 
 }
 
@@ -201,3 +164,6 @@ struct StringModify: View {
 //    rawSubStringArray = originalText.split(separator: "--")
 //    let rawStringArray = rawSubStringArray.map { String($0) }
 //}
+
+
+
