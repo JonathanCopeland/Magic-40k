@@ -15,6 +15,7 @@
 		BD2AA6852AD7DD6F00839091 /* StringModify.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AA6842AD7DD6F00839091 /* StringModify.swift */; };
 		BD2AA6872AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2AA6862AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png */; };
 		BD2AA6892AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2AA6882AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png */; };
+		BD2AA68B2AE3ED4400839091 /* 40k-38-lokhust-heavy-destroyer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD2AA68A2AE3ED4300839091 /* 40k-38-lokhust-heavy-destroyer.jpg */; };
 		BD4643652A4762B1009C0800 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4643642A4762B1009C0800 /* Test.swift */; };
 		BD663F602AA5C599000A1115 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F5F2AA5C599000A1115 /* HeaderView.swift */; };
 		BD663F622AA5C59E000A1115 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F612AA5C59E000A1115 /* FooterView.swift */; };
@@ -45,6 +46,7 @@
 		BD2AA6842AD7DD6F00839091 /* StringModify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringModify.swift; sourceTree = "<group>"; };
 		BD2AA6862AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CleanShot 2023-10-21 at 12 .05.38@2x.png"; sourceTree = "<group>"; };
 		BD2AA6882AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CleanShot 2023-10-21 at 12 .08.50@2x.png"; sourceTree = "<group>"; };
+		BD2AA68A2AE3ED4300839091 /* 40k-38-lokhust-heavy-destroyer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "40k-38-lokhust-heavy-destroyer.jpg"; sourceTree = "<group>"; };
 		BD4643642A4762B1009C0800 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		BD663F5F2AA5C599000A1115 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BD663F612AA5C59E000A1115 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				BD2AA6862AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png */,
 				BD2AA6882AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png */,
 				BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */,
+				BD2AA68A2AE3ED4300839091 /* 40k-38-lokhust-heavy-destroyer.jpg */,
 				BD86E6492A3DB76A00083CED /* Assets.xcassets */,
 				BD86E64B2A3DB76A00083CED /* Preview Content */,
 			);
@@ -229,6 +232,7 @@
 				BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */,
 				BD077C792AACB46200B7E63B /* keyrune.ttf in Resources */,
 				BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */,
+				BD2AA68B2AE3ED4400839091 /* 40k-38-lokhust-heavy-destroyer.jpg in Resources */,
 				BD86E64D2A3DB76A00083CED /* Preview Assets.xcassets in Resources */,
 				BD2AA6892AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png in Resources */,
 				BD2AA6872AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png in Resources */,
