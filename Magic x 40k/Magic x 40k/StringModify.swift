@@ -11,25 +11,38 @@ import Foundation
 
 struct StringModify: View {
     
-    let testString = "Test1\nTest2 — Test3 {B}{5}"
+    let line = "BLANCHE: I don't want realism. I want magic!"
     
+    let inputString = "Test1\nTest2 — Test3 {B}{5}"
+
     let goalString = "Flying\nEnmitic Exterminator -- When Lokhust Heavy Destroyer enters the battlefield, each player sacrifices a creature. Unearth {5}{B}{B}{B} ({5}{B}{B}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
     
     var body: some View {
         
         VStack {
-            Text("Hello \(Text("world").italic())")
+            Text(splitString()[1])
             
-            if testString.contains("{B}") {
-                Text(testString.replacingOccurrences(of: "{B}", with: "\(Text("{B}").italic())"))
-            }
-
+            let line = "BLANCHE: I don't want realism. I want magic!"
+            Text(line.split(whereSeparator: { $0 == "I" })[0])
         }
+        
+        
+        
         
     }
     
 
-    
+    func splitString() -> [Substring] {
+        
+        // Exclude
+//        var x = inputString.components(separatedBy: "\n")
+        
+        var x = inputString.split(separator: "\n", omittingEmptySubsequences: false)
+        
+        return x
+    }
+        
+
     
 }
 
