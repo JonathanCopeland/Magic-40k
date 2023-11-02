@@ -11,8 +11,8 @@
 		BD077C7D2AACC96300B7E63B /* RarityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD077C7C2AACC96300B7E63B /* RarityView.swift */; };
 		BD1CA1122A487581000B402B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA1112A487581000B402B /* ImageView.swift */; };
 		BD1CA1142A488807000B402B /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA1132A488807000B402B /* BodyView.swift */; };
+		BD1F902A2AF3A8050099B34F /* BodyStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F90292AF3A8050099B34F /* BodyStringView.swift */; };
 		BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */; };
-		BD2AA6852AD7DD6F00839091 /* StringModify.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AA6842AD7DD6F00839091 /* StringModify.swift */; };
 		BD2AA6872AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2AA6862AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png */; };
 		BD2AA6892AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2AA6882AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png */; };
 		BD2AA68B2AE3ED4400839091 /* 40k-38-lokhust-heavy-destroyer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD2AA68A2AE3ED4300839091 /* 40k-38-lokhust-heavy-destroyer.jpg */; };
@@ -41,9 +41,9 @@
 		BD077C7C2AACC96300B7E63B /* RarityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RarityView.swift; sourceTree = "<group>"; };
 		BD1CA1112A487581000B402B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BD1CA1132A488807000B402B /* BodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
+		BD1F90292AF3A8050099B34F /* BodyStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyStringView.swift; sourceTree = "<group>"; };
 		BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatrixBold.ttf; sourceTree = "<group>"; };
 		BD1FF00C2A47916300556CFE /* Magic-x-40k-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Magic-x-40k-Info.plist"; sourceTree = SOURCE_ROOT; };
-		BD2AA6842AD7DD6F00839091 /* StringModify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringModify.swift; sourceTree = "<group>"; };
 		BD2AA6862AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CleanShot 2023-10-21 at 12 .05.38@2x.png"; sourceTree = "<group>"; };
 		BD2AA6882AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CleanShot 2023-10-21 at 12 .08.50@2x.png"; sourceTree = "<group>"; };
 		BD2AA68A2AE3ED4300839091 /* 40k-38-lokhust-heavy-destroyer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "40k-38-lokhust-heavy-destroyer.jpg"; sourceTree = "<group>"; };
@@ -97,6 +97,7 @@
 				BD077C7C2AACC96300B7E63B /* RarityView.swift */,
 				BD1CA1112A487581000B402B /* ImageView.swift */,
 				BD1CA1132A488807000B402B /* BodyView.swift */,
+				BD1F90292AF3A8050099B34F /* BodyStringView.swift */,
 				BD663F612AA5C59E000A1115 /* FooterView.swift */,
 				BD663F632AA5C5FD000A1115 /* FrameView.swift */,
 				BD663F652AA5C7CF000A1115 /* CombinedView.swift */,
@@ -133,7 +134,6 @@
 				BD4643642A4762B1009C0800 /* Test.swift */,
 				BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */,
 				BDDE3EB32A3F7421003F6F81 /* 40k.json */,
-				BD2AA6842AD7DD6F00839091 /* StringModify.swift */,
 				BD2AA6862AE3E82000839091 /* CleanShot 2023-10-21 at 12 .05.38@2x.png */,
 				BD2AA6882AE3E8EF00839091 /* CleanShot 2023-10-21 at 12 .08.50@2x.png */,
 				BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */,
@@ -251,9 +251,9 @@
 				BD077C7D2AACC96300B7E63B /* RarityView.swift in Sources */,
 				BD86E6482A3DB76800083CED /* ContentView.swift in Sources */,
 				BDDC02CB2AD2E88D0063796A /* ManaView.swift in Sources */,
-				BD2AA6852AD7DD6F00839091 /* StringModify.swift in Sources */,
 				BD1CA1142A488807000B402B /* BodyView.swift in Sources */,
 				BDB042AB2ACFF492000FD971 /* ShadowViews.swift in Sources */,
+				BD1F902A2AF3A8050099B34F /* BodyStringView.swift in Sources */,
 				BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */,
 				BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */,
 				BD663F662AA5C7CF000A1115 /* CombinedView.swift in Sources */,

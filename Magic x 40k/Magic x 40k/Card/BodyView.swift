@@ -21,10 +21,15 @@ struct BodyView: View {
 
             
             VStack(alignment: .leading) {
-                Text(card.text)
-                    .font(.custom("Times New Roman", size: 14))                
+                
+//                Text(card.name)
+//                    .font(.custom("Times New Roman", size: 14))
+//                
+//                Text(card.text)
+//                    .font(.custom("Times New Roman", size: 14))                
 
-
+                BodyStringView(card: card)
+                
                     
                 if(card.flavorText != nil) {
                     Divider()
