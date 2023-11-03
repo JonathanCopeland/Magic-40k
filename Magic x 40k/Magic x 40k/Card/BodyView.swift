@@ -29,20 +29,15 @@ struct BodyView: View {
 //                    .font(.custom("Times New Roman", size: 14))                
 
                 BodyStringView(card: card)
-                    .padding(.top, 20)
-                    .frame(width: 310, height: 170)
+                    .frame(width: 309, height: 147)
                 
                     
-                if(card.flavorText != nil) {
-                    Divider()
-                }
+//                if(card.flavorText != nil) {
+//                    Divider()
+//                }
                 
-                Text(card.flavorText ?? "")
-                .font(.custom("Times New Roman", size: 14))
-                .italic()
+
                 
-                
-                Spacer()
             }
             .padding(.all, 2)
             .padding(.top, 2)
@@ -125,5 +120,5 @@ struct BodyView: View {
 }
 
 #Preview {
-    BodyView(card: universes.data.cards[2])
+    BodyView(card: universes.data.cards[54])
 }

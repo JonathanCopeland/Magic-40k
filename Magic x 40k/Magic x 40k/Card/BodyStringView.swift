@@ -27,6 +27,7 @@ struct BodyStringView: View {
     
     var body: some View {
         
+        let flavourText = card.flavorText ?? ""
         let inputString = card.text
         var convertedString: String {
             let processedString = processString(input: inputString)
@@ -50,6 +51,9 @@ struct BodyStringView: View {
         }
         
         
+//        <hr id="test">
+//        <p><i>\(flavourText)</i></p>
+//        
         
         WebView(htmlSource: """
                 <style>
@@ -60,8 +64,13 @@ struct BodyStringView: View {
                     font-size: 46px;
                             opacity: 1;
                 }
+                #test {
+                box-shadow: 0px -2px 6px 2px rgba(0,0,0,.2);
+                width: 920px;
+                }
                 </style>
                 <p>\(convertedString)</p>
+
                 """
         )
     }
@@ -171,7 +180,7 @@ struct BodyStringView: View {
 
 
 #Preview {
-    BodyStringView(card: universes.data.cards[2])
+    BodyStringView(card: universes.data.cards[9])
 }
 
 
