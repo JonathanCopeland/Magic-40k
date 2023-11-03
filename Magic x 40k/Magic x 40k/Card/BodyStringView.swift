@@ -66,6 +66,7 @@ struct BodyStringView: View {
                 .replacingOccurrences(of: "{W}", with: "<img style=\"width: 24px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/W.imageset/W.svg\" alt=\"Your image\" />")
                 .replacingOccurrences(of: "{G}", with: "<img style=\"width: 24px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/G.imageset/G.svg\" alt=\"Your image\" />")
                 .replacingOccurrences(of: "{R}", with: "<img style=\"width: 24px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/R.imageset/R.svg\" alt=\"Your image\" />")
+                .replacingOccurrences(of: "{T}", with: "<img style=\"width: 24px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/T.imageset/T.svg\" alt=\"Your image\" />")
         }
         
         
@@ -82,6 +83,7 @@ struct BodyStringView: View {
         )
     }
     
+    // Adds italics
     func processString(input: String) -> String {
         var newString = input
 
@@ -115,7 +117,7 @@ struct BodyStringView: View {
                     result = "<i>\(splitStringBySlashN[0])</i>"
                 }
             } else {
-                result += " -- \(part)"
+                result += " — \(part)"
             }
         }
 
@@ -126,7 +128,7 @@ struct BodyStringView: View {
 
 
 #Preview {
-    BodyStringView(card: universes.data.cards[68])
+    BodyStringView(card: universes.data.cards[2])
 }
 
 
