@@ -29,6 +29,8 @@ struct BodyView: View {
 //                    .font(.custom("Times New Roman", size: 14))                
 
                 BodyStringView(card: card)
+                    .padding(.top, 20)
+                    .frame(width: 310, height: 170)
                 
                     
                 if(card.flavorText != nil) {
@@ -123,5 +125,5 @@ struct BodyView: View {
 }
 
 #Preview {
-    BodyView(card: universes.data.cards[7])
+    BodyView(card: universes.data.cards[2])
 }

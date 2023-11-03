@@ -11,7 +11,7 @@ import UIKit
 struct GradientFill: View {
     
     let card: Card
-    
+
     
     var body: some View {
         
