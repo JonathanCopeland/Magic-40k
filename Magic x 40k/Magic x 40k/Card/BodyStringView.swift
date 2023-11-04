@@ -48,6 +48,7 @@ struct BodyStringView: View {
                 .replacingOccurrences(of: "{G}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/G.imageset/G.svg\" alt=\"Your image\" />")
                 .replacingOccurrences(of: "{R}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/R.imageset/R.svg\" alt=\"Your image\" />")
                 .replacingOccurrences(of: "{T}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/T.imageset/T.svg\" alt=\"Your image\" />")
+
         }
         
         
@@ -180,7 +181,7 @@ struct BodyStringView: View {
 
 
 #Preview {
-    BodyStringView(card: universes.data.cards[9])
+    BodyStringView(card: universes.data.cards[12])
 }
 
 
