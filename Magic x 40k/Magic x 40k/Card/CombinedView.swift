@@ -81,7 +81,7 @@ struct CombinedView: View {
                     
 
                     
-                    FooterView()
+                    FooterView(card: card)
                 }
                 .padding(.top, 20)
                 
@@ -120,6 +120,6 @@ struct CombinedView: View {
 }
 
 #Preview {
-    CombinedView(card: universes.data.cards[1])
+    CombinedView(card: universes.data.cards[8])
 }
 

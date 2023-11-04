@@ -33,28 +33,27 @@ struct BodyStringView: View {
             let processedString = processString(input: inputString)
             return processedString
                 .replacingOccurrences(of: "\n", with: "<br>")
-                .replacingOccurrences(of: "{1}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/1.imageset/1.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{2}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/2.imageset/2.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{3}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/3.imageset/3.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{4}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/4.imageset/4.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{5}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/5.imageset/5.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{6}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/6.imageset/6.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{7}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/7.imageset/7.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{8}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/8.imageset/8.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{9}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/9.imageset/9.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{B}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/B.imageset/B.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{U}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/U.imageset/U.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{W}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/W.imageset/W.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{G}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/G.imageset/G.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{R}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/R.imageset/R.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{T}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/T.imageset/T.svg\" alt=\"Your image\" />")
-                .replacingOccurrences(of: "{X}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/X.imageset/X.svg\" alt=\"Your image\" />")
+                .replacingOccurrences(of: "{1}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/1.imageset/1.svg\"   />")
+                .replacingOccurrences(of: "{2}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/2.imageset/2.svg\"   />")
+                .replacingOccurrences(of: "{3}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/3.imageset/3.svg\"   />")
+                .replacingOccurrences(of: "{4}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/4.imageset/4.svg\"   />")
+                .replacingOccurrences(of: "{5}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/5.imageset/5.svg\"   />")
+                .replacingOccurrences(of: "{6}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/6.imageset/6.svg\"   />")
+                .replacingOccurrences(of: "{7}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/7.imageset/7.svg\"   />")
+                .replacingOccurrences(of: "{8}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/8.imageset/8.svg\"   />")
+                .replacingOccurrences(of: "{9}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/9.imageset/9.svg\"   />")
+                .replacingOccurrences(of: "{B}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/B.imageset/B.svg\"   />")
+                .replacingOccurrences(of: "{U}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/U.imageset/U.svg\"   />")
+                .replacingOccurrences(of: "{W}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/W.imageset/W.svg\"   />")
+                .replacingOccurrences(of: "{G}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/G.imageset/G.svg\"   />")
+                .replacingOccurrences(of: "{R}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/R.imageset/R.svg\"   />")
+                .replacingOccurrences(of: "{T}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/T.imageset/T.svg\"   />")
+                .replacingOccurrences(of: "{X}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/X.imageset/X.svg\"   />")
+                .replacingOccurrences(of: "{C}", with: "<img style=\"width: 36px\" src=\"https://raw.githubusercontent.com/JonathanCopeland/Magic-40k/main/Magic%20x%2040k/Magic%20x%2040k/Assets.xcassets/Mana/C.imageset/C.svg\"   />")
         }
         
         
-//        <hr id="test">
-//        <p><i>\(flavourText)</i></p>
-//        
+
         
         WebView(htmlSource: """
                 <style>
@@ -63,18 +62,21 @@ struct BodyStringView: View {
                 }
                 p {
                     font-size: 46px;
-                            opacity: 1;
+                    opacity: 1;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
                 }
-                #test {
-                box-shadow: 0px -2px 6px 2px rgba(0,0,0,.2);
-                width: 920px;
-                }
+
                 </style>
                 <p>\(convertedString)</p>
+                \(getDivider())
+                <p><i>\(flavourText)</i></p>
 
                 """
         )
     }
+    
+//    box-shadow: 0px -2px 6px 2px rgba(0,0,0,.9);
     
     // Adds italics
     func processString(input: String) -> String {
@@ -84,30 +86,41 @@ struct BodyStringView: View {
         for text in textSections {
             let subSections = text.split(separator: " — ", maxSplits: 1, omittingEmptySubsequences: false)
             if subSections.count >= 2 {
-                var secondSubsection = String(subSections[1])
-                
-                // finding text within parentheses
+                let secondSubsection = String(subSections[1])
+
+                // finding text within parentheses in the whole text, not just after " — "
                 let regex = try! NSRegularExpression(pattern: "\\((.*?)\\)", options: .caseInsensitive)
                 let range = NSRange(location: 0, length: secondSubsection.utf16.count)
                 let matches = regex.matches(in: secondSubsection, options: [], range: range)
-                
-                // reversing so we don't mess up the indices
+
+                var finalSubsection = secondSubsection
                 for match in matches.reversed() {
-                    let nsRange = match.range(at: 0) // changed this to get the whole match including parentheses
+                    let nsRange = match.range(at: 0)
                     if let range = Range(nsRange, in: secondSubsection) {
-                        let before = secondSubsection[..<range.lowerBound]
                         let target = secondSubsection[range]
-                        let after = secondSubsection[range.upperBound...]
-                        secondSubsection = "\(before)<i>\(target)</i>\(after)"
+                        finalSubsection = finalSubsection.replacingOccurrences(of: String(target), with: "<i>\(target)</i>")
+                    }
+                }
+
+                result.append("<i>\(subSections[0])</i> — \(finalSubsection)")
+            } else {
+                let regex = try! NSRegularExpression(pattern: "\\((.*?)\\)", options: .caseInsensitive)
+                let range = NSRange(location: 0, length: String(text).utf16.count)
+                let matches = regex.matches(in: String(text), options: [], range: range)
+
+                var finalSubsection = String(text)
+
+                for match in matches.reversed() {
+                    let nsRange = match.range(at: 0)
+                    if let range = Range(nsRange, in: finalSubsection) {
+                        let target = finalSubsection[range]
+                        finalSubsection = finalSubsection.replacingOccurrences(of: String(target), with: "<i>\(target)</i>")
                     }
                 }
                 
-                result.append("<i>\(subSections[0])</i> — \(secondSubsection)")
-            } else {
-                result.append(String(text))
+                result.append(finalSubsection)
             }
         }
-
         return result.joined(separator: "\n")
     }
     
@@ -177,11 +190,19 @@ struct BodyStringView: View {
         
     }
     
+    func getDivider() -> String  {
+        if(card.flavorText != nil) {
+            return "<hr style=\"width: 920px;\">"
+        }
+        return ""
+        
+    }
+    
 }
 
 
 #Preview {
-    BodyStringView(card: universes.data.cards[12])
+    BodyStringView(card: universes.data.cards[16])
 }
 
 
