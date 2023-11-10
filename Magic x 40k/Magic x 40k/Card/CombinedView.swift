@@ -44,13 +44,13 @@ struct CombinedView: View {
                         ImageView(card: card)
                             .padding(.top, 33)
                         
-                        // Add legendary crest here
+//                         Add legendary crest here
 //                        Image("unnamed-6")
 //                            .resizable()
 //                            .aspectRatio(contentMode: .fit)
 //                            .frame(width: 365)
 //                            .padding(.top, -23)
-//
+
                         
                         HeaderView(card: card)
                         
@@ -82,6 +82,14 @@ struct CombinedView: View {
 
                     
                     FooterView(card: card)
+                    
+                    if(card.power != nil) {
+                        Size(card: card)
+                            .padding(.top, -45)
+                            .padding(.leading, 243)
+                            .scaleEffect(1.1)
+                    }
+
                 }
                 .padding(.top, 20)
                 
@@ -120,6 +128,6 @@ struct CombinedView: View {
 }
 
 #Preview {
-    CombinedView(card: universes.data.cards[8])
+    CombinedView(card: universes.data.cards[3])
 }
 

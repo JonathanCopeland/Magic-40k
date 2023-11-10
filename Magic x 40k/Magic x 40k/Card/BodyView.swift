@@ -17,27 +17,11 @@ struct BodyView: View {
         ZStack (alignment: .top) {
             GradientFill(card: card)
                 .frame(width: 316, height: 153)
-            
 
-            
             VStack(alignment: .leading) {
-                
-//                Text(card.name)
-//                    .font(.custom("Times New Roman", size: 14))
-//                
-//                Text(card.text)
-//                    .font(.custom("Times New Roman", size: 14))                
-
                 BodyStringView(card: card)
                     .frame(width: 309, height: 147)
-                
-                    
-//                if(card.flavorText != nil) {
-//                    Divider()
-//                }
-                
 
-                
             }
             .padding(.all, 2)
             .padding(.top, 2)

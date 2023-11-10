@@ -40,7 +40,7 @@ struct ContentView: View {
         
         NavigationView {
             List(sortedCards) { card in
-                if(card.finishes[0].rawValue == "nonfoil" || (card.rarity.rawValue == "mythic" && card.isStarter == true) ) {
+                if( ((card.finishes[0].rawValue == "nonfoil" || (card.rarity.rawValue == "mythic" && card.isStarter == true)) && card.subtypes.first != "Saga") ) {
                     NavigationLink {
                         CombinedView(card: card)
                     } label: {

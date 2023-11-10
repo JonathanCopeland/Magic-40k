@@ -39,17 +39,36 @@ struct FooterView: View {
                     
             }
             Spacer()
-            VStack (alignment: .trailing) {
-                Spacer()
+            
+            if(card.power != nil) {
+                VStack (alignment: .leading) {
+                    Spacer()
 
-                Text("C GW")
-                    .font(.system(size: 7.0, design: .serif))
-                Text("TM & C 2022 Wizards of the Coast")
-                    .font(.system(size: 7.0, design: .serif))
-                    
-                Spacer()
+                    Text("C GW")
+                        .font(.system(size: 7.0, design: .serif))
+                    Text("TM & C 2022 Wizards of the Coast")
+                        .font(.system(size: 7.0, design: .serif))
+                        
+                    Spacer()
 
+                }
             }
+            else {
+                VStack (alignment: .trailing) {
+                    Spacer()
+
+                    Text("C GW")
+                        .font(.system(size: 7.0, design: .serif))
+                    Text("TM & C 2022 Wizards of the Coast")
+                        .font(.system(size: 7.0, design: .serif))
+                        
+                    Spacer()
+
+                }
+            }
+            
+            
+
         }
         .foregroundColor(.white)
         .frame(width: 305, height: 32)
