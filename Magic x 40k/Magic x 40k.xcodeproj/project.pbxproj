@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		BD077C792AACB46200B7E63B /* keyrune.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD077C782AACB46200B7E63B /* keyrune.ttf */; };
 		BD077C7D2AACC96300B7E63B /* RarityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD077C7C2AACC96300B7E63B /* RarityView.swift */; };
+		BD1395002B01179D00ADA78E /* CardSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1394FF2B01179D00ADA78E /* CardSwipe.swift */; };
 		BD1CA1122A487581000B402B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA1112A487581000B402B /* ImageView.swift */; };
 		BD1CA1142A488807000B402B /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA1132A488807000B402B /* BodyView.swift */; };
 		BD1F902A2AF3A8050099B34F /* BodyStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F90292AF3A8050099B34F /* BodyStringView.swift */; };
 		BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */; };
-		BD4643652A4762B1009C0800 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4643642A4762B1009C0800 /* Test.swift */; };
 		BD663F602AA5C599000A1115 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F5F2AA5C599000A1115 /* HeaderView.swift */; };
 		BD663F622AA5C59E000A1115 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F612AA5C59E000A1115 /* FooterView.swift */; };
 		BD663F642AA5C5FD000A1115 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F632AA5C5FD000A1115 /* FrameView.swift */; };
@@ -37,12 +37,12 @@
 /* Begin PBXFileReference section */
 		BD077C782AACB46200B7E63B /* keyrune.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = keyrune.ttf; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Downloads/keyrune-master-2/fonts/keyrune.ttf"; sourceTree = "<group>"; };
 		BD077C7C2AACC96300B7E63B /* RarityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RarityView.swift; sourceTree = "<group>"; };
+		BD1394FF2B01179D00ADA78E /* CardSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSwipe.swift; sourceTree = "<group>"; };
 		BD1CA1112A487581000B402B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BD1CA1132A488807000B402B /* BodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
 		BD1F90292AF3A8050099B34F /* BodyStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyStringView.swift; sourceTree = "<group>"; };
 		BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatrixBold.ttf; sourceTree = "<group>"; };
 		BD1FF00C2A47916300556CFE /* Magic-x-40k-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Magic-x-40k-Info.plist"; sourceTree = SOURCE_ROOT; };
-		BD4643642A4762B1009C0800 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		BD663F5F2AA5C599000A1115 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BD663F612AA5C59E000A1115 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		BD663F632AA5C5FD000A1115 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				BDB042A72ACFF34A000FD971 /* Modifiers */,
 				BD663F5A2AA5C455000A1115 /* Card */,
 				BD86E6472A3DB76800083CED /* ContentView.swift */,
-				BD4643642A4762B1009C0800 /* Test.swift */,
+				BD1394FF2B01179D00ADA78E /* CardSwipe.swift */,
 				BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */,
 				BDDE3EB32A3F7421003F6F81 /* 40k.json */,
 				BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */,
@@ -249,11 +249,11 @@
 				BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */,
 				BD663F662AA5C7CF000A1115 /* CombinedView.swift in Sources */,
 				BDB042A92ACFF42D000FD971 /* EllipticalShapeViews.swift in Sources */,
-				BD4643652A4762B1009C0800 /* Test.swift in Sources */,
 				BD663F602AA5C599000A1115 /* HeaderView.swift in Sources */,
 				BD663F6A2AA5CA17000A1115 /* TypeView.swift in Sources */,
 				BDB042A42ACFF1E0000FD971 /* GradientFill.swift in Sources */,
 				BD1CA1122A487581000B402B /* ImageView.swift in Sources */,
+				BD1395002B01179D00ADA78E /* CardSwipe.swift in Sources */,
 				BD7D81472AFE2085007A2873 /* Size.swift in Sources */,
 				BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */,
 				BDB042A62ACFF24F000FD971 /* BackgroundModifier.swift in Sources */,

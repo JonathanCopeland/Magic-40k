@@ -100,28 +100,28 @@ struct CombinedView: View {
         }
         .navigationTitle("\(card.name)")
         .navigationBarTitleDisplayMode(.inline)
-        .rotation3DEffect(.degrees(dragLocation.x), axis: (x: 0, y: 1, z: 0)) // Horizontal dragging tilts along Y Axis
-        .rotation3DEffect(.degrees(dragLocation.y), axis: (x: 1, y: 0, z: 0)) // Vertical dragging tilts along X Axis
-        .gesture(
-            DragGesture(minimumDistance: 0.0)
-                .onChanged { gesture in
-                    let normalizedX = scale(inputMin: 0, inputMax: width - 4, outputMin: -intensity, outputMax: intensity, value: gesture.location.x)
-                    let normalizedY = scale(inputMin: 0, inputMax: height - 4, outputMin: intensity, outputMax: -intensity, value: gesture.location.y)
-
-                    print(normalizedX, normalizedY)
-
-                    withAnimation(isDragging ? .interactiveSpring() : .spring()) {
-                        dragLocation = CGPoint(x: normalizedX, y: normalizedY)
-                    }
-                    isDragging = true
-                }
-                .onEnded { _ in
-                    isDragging = false
-                    withAnimation(.spring()) {
-                        dragLocation = .zero
-                    }
-                }
-        )
+//        .rotation3DEffect(.degrees(dragLocation.x), axis: (x: 0, y: 1, z: 0)) // Horizontal dragging tilts along Y Axis
+//        .rotation3DEffect(.degrees(dragLocation.y), axis: (x: 1, y: 0, z: 0)) // Vertical dragging tilts along X Axis
+//        .gesture(
+//            DragGesture(minimumDistance: 0.0)
+//                .onChanged { gesture in
+//                    let normalizedX = scale(inputMin: 0, inputMax: width - 4, outputMin: -intensity, outputMax: intensity, value: gesture.location.x)
+//                    let normalizedY = scale(inputMin: 0, inputMax: height - 4, outputMin: intensity, outputMax: -intensity, value: gesture.location.y)
+//
+//                    print(normalizedX, normalizedY)
+//
+//                    withAnimation(isDragging ? .interactiveSpring() : .spring()) {
+//                        dragLocation = CGPoint(x: normalizedX, y: normalizedY)
+//                    }
+//                    isDragging = true
+//                }
+//                .onEnded { _ in
+//                    isDragging = false
+//                    withAnimation(.spring()) {
+//                        dragLocation = .zero
+//                    }
+//                }
+//        )
 
 
     }
