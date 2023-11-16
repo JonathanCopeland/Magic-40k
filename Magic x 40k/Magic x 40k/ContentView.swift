@@ -38,49 +38,64 @@ struct ContentView: View {
         
     var body: some View {
         
-        NavigationView {
-            List(sortedCards) { card in
-                if( ((card.finishes[0].rawValue == "nonfoil" || (card.rarity.rawValue == "mythic" && card.isStarter == true)) && card.subtypes.first != "Saga") ) {
-                    NavigationLink {
-                        CombinedView(card: card)
-                    } label: {
-                        HStack {
-                            VStack (alignment: .leading) {
-                                Text(card.name)
-                                    .font(.headline)
-                                Text(typeView(card: card))
-                                    .foregroundColor(.secondary)
+        TabView {
+            
+            CardSwipe()
+                .tabItem {
+                    Label("Explore", systemImage: "square.stack")
+                }
+
+            NavigationView {
+                List(sortedCards) { card in
+                    if( ((card.finishes[0].rawValue == "nonfoil" || (card.rarity.rawValue == "mythic" && card.isStarter == true)) && card.subtypes.first != "Saga") ) {
+                        NavigationLink {
+                            CombinedView(card: card)
+                        } label: {
+                            HStack {
+                                VStack (alignment: .leading) {
+                                    Text(card.name)
+                                        .font(.headline)
+                                    Text(typeView(card: card))
+                                        .foregroundColor(.secondary)
+                                    
+
+
+                                }
                                 
-
-
+                                Spacer()
+                                
+                                RarityView(rarity: card.rarity.rawValue)
                             }
                             
-                            Spacer()
-                            
-                            RarityView(rarity: card.rarity.rawValue)
                         }
-                        
                     }
                 }
-            }
-            .navigationTitle("Cards")
-            .searchable(text: $searchText, prompt: "Search for a card")
-            .toolbar {
-                Button {
-                    showingSortOptions = true
-                } label: {
-                    Label("Change sort order", systemImage: "arrow.up.arrow.down")
+                .navigationTitle("Search")
+                .searchable(text: $searchText, prompt: "Search for a card")
+                .toolbar {
+                    Button {
+                        showingSortOptions = true
+                    } label: {
+                        Label("Change sort order", systemImage: "arrow.up.arrow.down")
+                    }
+                    
+                    
                 }
-                
-            }
-            .confirmationDialog("Sort order", isPresented: $showingSortOptions) {
-                Button("Default") { sortType = .default }
-                Button("Alphabetical") { sortType = .alphabetical }
-                Button("Rarity") { sortType = .rarity }
-            }
-            
+                .confirmationDialog("Sort order", isPresented: $showingSortOptions) {
+                    Button("Default") { sortType = .default }
+                    Button("Alphabetical") { sortType = .alphabetical }
+                    Button("Rarity") { sortType = .rarity }
+                }
 
+                
+
+            }
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
         }
+        
+
     }
     
     var filteredCards: [Card] {
