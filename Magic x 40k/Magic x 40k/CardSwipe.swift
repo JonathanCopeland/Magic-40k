@@ -33,7 +33,6 @@ struct CardSwipe: View {
             .frame(maxWidth: .infinity)
             
         }
-        .navigationTitle("My Title")
         .scrollTargetBehavior(.viewAligned)
         .safeAreaPadding(.horizontal, 0)
         

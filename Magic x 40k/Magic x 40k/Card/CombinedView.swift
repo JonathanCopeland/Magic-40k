@@ -98,8 +98,8 @@ struct CombinedView: View {
             }
             
         }
-        .navigationTitle("\(card.name)")
-        .navigationBarTitleDisplayMode(.inline)
+//        .navigationTitle("\(card.name)")
+//        .navigationBarTitleDisplayMode(.inline)
 //        .rotation3DEffect(.degrees(dragLocation.x), axis: (x: 0, y: 1, z: 0)) // Horizontal dragging tilts along Y Axis
 //        .rotation3DEffect(.degrees(dragLocation.y), axis: (x: 1, y: 0, z: 0)) // Vertical dragging tilts along X Axis
 //        .gesture(
