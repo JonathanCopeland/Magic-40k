@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD077C792AACB46200B7E63B /* keyrune.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD077C782AACB46200B7E63B /* keyrune.ttf */; };
 		BD077C7D2AACC96300B7E63B /* RarityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD077C7C2AACC96300B7E63B /* RarityView.swift */; };
 		BD1395002B01179D00ADA78E /* CardSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1394FF2B01179D00ADA78E /* CardSwipe.swift */; };
 		BD1395042B026FD500ADA78E /* TestTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1395032B026FD500ADA78E /* TestTabs.swift */; };
@@ -21,6 +20,7 @@
 		BD663F642AA5C5FD000A1115 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F632AA5C5FD000A1115 /* FrameView.swift */; };
 		BD663F662AA5C7CF000A1115 /* CombinedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F652AA5C7CF000A1115 /* CombinedView.swift */; };
 		BD663F6A2AA5CA17000A1115 /* TypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD663F692AA5CA17000A1115 /* TypeView.swift */; };
+		BD6A41C82B3C421800C0EB28 /* keyrune.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD6A41C72B3C421800C0EB28 /* keyrune.ttf */; };
 		BD7D81472AFE2085007A2873 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7D81462AFE2085007A2873 /* Size.swift */; };
 		BD86E6462A3DB76800083CED /* Magic_x_40kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */; };
 		BD86E6482A3DB76800083CED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86E6472A3DB76800083CED /* ContentView.swift */; };
@@ -37,7 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD077C782AACB46200B7E63B /* keyrune.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = keyrune.ttf; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Downloads/keyrune-master-2/fonts/keyrune.ttf"; sourceTree = "<group>"; };
 		BD077C7C2AACC96300B7E63B /* RarityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RarityView.swift; sourceTree = "<group>"; };
 		BD1394FF2B01179D00ADA78E /* CardSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSwipe.swift; sourceTree = "<group>"; };
 		BD1395032B026FD500ADA78E /* TestTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabs.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		BD663F632AA5C5FD000A1115 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		BD663F652AA5C7CF000A1115 /* CombinedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedView.swift; sourceTree = "<group>"; };
 		BD663F692AA5CA17000A1115 /* TypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeView.swift; sourceTree = "<group>"; };
+		BD6A41C72B3C421800C0EB28 /* keyrune.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = keyrune.ttf; path = "../../../../../../Downloads/keyrune-master-3/fonts/keyrune.ttf"; sourceTree = "<group>"; };
 		BD7D81462AFE2085007A2873 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		BD86E6422A3DB76800083CED /* Magic x 40k.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic x 40k.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD86E6452A3DB76800083CED /* Magic_x_40kApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_x_40kApp.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		BD1FF0092A4790D200556CFE /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				BD077C782AACB46200B7E63B /* keyrune.ttf */,
+				BD6A41C72B3C421800C0EB28 /* keyrune.ttf */,
 				BD1FF00A2A4790FC00556CFE /* MatrixBold.ttf */,
 			);
 			path = Font;
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */,
-				BD077C792AACB46200B7E63B /* keyrune.ttf in Resources */,
+				BD6A41C82B3C421800C0EB28 /* keyrune.ttf in Resources */,
 				BD1FF00B2A4790FC00556CFE /* MatrixBold.ttf in Resources */,
 				BD86E64D2A3DB76A00083CED /* Preview Assets.xcassets in Resources */,
 				BD86E64A2A3DB76A00083CED /* Assets.xcassets in Resources */,

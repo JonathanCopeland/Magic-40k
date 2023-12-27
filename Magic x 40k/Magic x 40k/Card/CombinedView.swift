@@ -25,32 +25,17 @@ struct CombinedView: View {
     }
     
     var body: some View {
+
         
-        
-        
-        VStack(alignment: .center) {
             ZStack (alignment: .top) {
                 FrameView(card: card)
                     .shadow(radius: 31)
                 
-                
-                
 
-                
-
-                
                 VStack (alignment: .center, spacing: 0) {
                     ZStack (alignment: .top) {
                         ImageView(card: card)
                             .padding(.top, 33)
-                        
-//                         Add legendary crest here
-//                        Image("unnamed-6")
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(width: 365)
-//                            .padding(.top, -23)
-
                         
                         HeaderView(card: card)
                         
@@ -89,15 +74,22 @@ struct CombinedView: View {
                             .padding(.leading, 243)
                             .scaleEffect(1.1)
                     }
-
                 }
                 .padding(.top, 20)
-                
-
-                
             }
-            
-        }
+        .scaleEffect(1.1)
+        
+        
+        
+
+    }
+    
+}
+
+#Preview {
+    CombinedView(card: universes.data.cards[3])
+}
+
 //        .navigationTitle("\(card.name)")
 //        .navigationBarTitleDisplayMode(.inline)
 //        .rotation3DEffect(.degrees(dragLocation.x), axis: (x: 0, y: 1, z: 0)) // Horizontal dragging tilts along Y Axis
@@ -122,12 +114,3 @@ struct CombinedView: View {
 //                    }
 //                }
 //        )
-
-
-    }
-}
-
-#Preview {
-    CombinedView(card: universes.data.cards[3])
-}
-

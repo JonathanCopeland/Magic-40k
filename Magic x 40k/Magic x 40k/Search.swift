@@ -20,7 +20,7 @@ struct Search: View {
     @State private var searchText = ""
     @State private var sortType = SortType.default
     @State private var showingSortOptions = false
-    @Binding var showingSearch: Bool
+//    @Binding var showingSearch: Bool
     
     var sortedCards: [Card] {
         switch sortType {
@@ -40,6 +40,7 @@ struct Search: View {
                 if( ((card.finishes[0].rawValue == "nonfoil" || (card.rarity.rawValue == "mythic" && card.isStarter == true)) && card.subtypes.first != "Saga") ) {
                     NavigationLink {
                         CombinedView(card: card)
+                            .padding(.bottom, 80)
                     } label: {
                         HStack {
                             VStack (alignment: .leading) {
@@ -67,11 +68,6 @@ struct Search: View {
                     Label("Change sort order", systemImage: "arrow.up.arrow.down")
                 }
                 
-                Button {
-                    self.showingSearch = false
-                } label: {
-                    Label("Close", systemImage: "xmark.circle.fill")
-                }
 
             }
             .confirmationDialog("Sort order", isPresented: $showingSortOptions) {

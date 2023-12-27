@@ -19,19 +19,28 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            CardSwipe()
-                .navigationTitle("Cards")
-                .toolbar {
-                    Button {
-                        self.showingSearch = true
-                    } label: {
-                        Label("Change sort order", systemImage: "magnifyingglass")
+            VStack {
+                CardSwipe()
+                    .ignoresSafeArea()
+                    .navigationTitle("Cards")
+                    .toolbar {
+                        Button {
+                            self.showingSearch = true
+                        } label: {
+                            Label("Change sort order", systemImage: "magnifyingglass")
+                        }
                     }
-                }
-                .sheet(isPresented: $showingSearch) {
-                    Search(showingSearch: self.$showingSearch)
-                }
+//                    .sheet(isPresented: $showingSearch) {
+//                        Search(showingSearch: self.$showingSearch)
+//                    }
+                Button("Hello", action: {
+                    
+                })
+            }
+            
         }
+        
+        
     }
 
     

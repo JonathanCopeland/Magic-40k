@@ -13,6 +13,7 @@ struct BodyView: View {
     
     var body: some View {
         
+        
 
         ZStack (alignment: .top) {
             GradientFill(card: card)
