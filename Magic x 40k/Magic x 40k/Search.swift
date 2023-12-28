@@ -30,16 +30,15 @@ struct Search: View {
             return filteredCards.sorted { $0.name < $1.name }
         case .rarity:
             return filteredCards.sorted { $0.rarity.rawValue < $1.rarity.rawValue }
-
         }
     }
     
     var body: some View {
         NavigationView {
             List(sortedCards) { card in
-                if( ((card.finishes[0].rawValue == "nonfoil" || (card.rarity.rawValue == "mythic" && card.isStarter == true)) && card.subtypes.first != "Saga") ) {
+                if( ((card.finishes[0].rawValue == "nonfoil" || (card.rarity.rawValue == "mythic" && card.isStarter == true)) && (card.subtypes.first != "Saga")) ) {
                     NavigationLink {
-                        CombinedView(card: card)
+                        CombinedViewSearch(card: card)
                             .padding(.bottom, 80)
                     } label: {
                         HStack {
@@ -71,7 +70,7 @@ struct Search: View {
 
             }
             .confirmationDialog("Sort order", isPresented: $showingSortOptions) {
-                Button("Default") { sortType = .default }
+                Button("Collector's Number") { sortType = .default }
                 Button("Alphabetical") { sortType = .alphabetical }
                 Button("Rarity") { sortType = .rarity }
             }
@@ -104,6 +103,6 @@ struct Search: View {
     
 }
 
-//#Preview {
-//    Search(showingSearch: self.$showingSearch)
-//}
+#Preview {
+    Search()
+}

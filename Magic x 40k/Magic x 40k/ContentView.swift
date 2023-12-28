@@ -12,41 +12,28 @@ let universes: UniversesBeyond = Bundle.main.decode("40k.json")
 
 struct ContentView: View {
     
-    @State private var showingSearch = false
 
-    
- 
     var body: some View {
         
-        NavigationView {
-            VStack {
+        TabView {
                 CardSwipe()
-                    .ignoresSafeArea()
-                    .navigationTitle("Cards")
-                    .toolbar {
-                        Button {
-                            self.showingSearch = true
-                        } label: {
-                            Label("Change sort order", systemImage: "magnifyingglass")
-                        }
-                    }
-//                    .sheet(isPresented: $showingSearch) {
-//                        Search(showingSearch: self.$showingSearch)
-//                    }
-                Button("Hello", action: {
-                    
-                })
-            }
+                .tabItem {
+                    Label("Cards", systemImage: "square.stack.fill")
+                }
+                .tag("Cards")
+        
+            
+                Search()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+                .tag("Search")
             
         }
         
         
     }
 
-    
-
-
-    
     
 }
 
