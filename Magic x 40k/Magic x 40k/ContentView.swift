@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 let universes: UniversesBeyond = Bundle.main.decode("40k.json")
 
 
 struct ContentView: View {
+    
+    @Environment(\.modelContext) var modelContext // Make a THING
+    @Query var favourites: [Favourite] // Create a thing
     
 
     var body: some View {
@@ -22,12 +26,14 @@ struct ContentView: View {
                 }
                 .tag("Cards")
         
-            
+
                 Search()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
                 .tag("Search")
+            
+
             
         }
         

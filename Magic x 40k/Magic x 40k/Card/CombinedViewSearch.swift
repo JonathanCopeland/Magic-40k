@@ -13,16 +13,26 @@
 //
 
 import SwiftUI
+import SwiftData
 
 
 struct CombinedViewSearch: View {
+
+    @Query var favourites: [Favourite] // call favourites array in storage
+    @Environment(\.modelContext) var modelContext // call temporary memory storage
+
+
+
     let card : Card
     
     @State var dragLocation = CGPoint(x: 0, y: 0) // Coordinates of the drag gesture
     @State var isDragging = false
+    
 
     var width: CGFloat = 340
     var height: CGFloat = 240
+    
+    @State private var heartIsSet = false
 
     var intensity: CGFloat = 5
 
@@ -84,6 +94,25 @@ struct CombinedViewSearch: View {
                 }
                 .padding(.top, 20)
             }
+
+            .toolbar {
+                
+                Button(action: setFavourite) {
+                    
+                                            Label("Favourite", systemImage: "heart.fill")
+
+//                    if(checkFavourite()) {
+//                        Label("Favourite", systemImage: "heart.fill")
+//                    }
+//                    else {
+//                        Label("Favourite", systemImage: "heart")
+//
+//                    }
+                    
+                }
+    
+                
+            }
         .scaleEffect(1.1)
         .navigationTitle("\(card.name)")
         .navigationBarTitleDisplayMode(.inline)
@@ -113,6 +142,31 @@ struct CombinedViewSearch: View {
         
         
 
+        
+
+    }
+    
+    func checkFavourite() {
+        let a = Favourite(card: card)
+        
+        if(favourites.contains(a)) {
+            heartIsSet = true
+        } else {
+            heartIsSet = false
+        }
+    }
+    
+    func setFavourite() {
+        let a = Favourite(card: card)
+        
+        if(favourites.contains(a)) {
+            modelContext.delete(a)
+            heartIsSet = false
+        } else {
+            modelContext.insert(a)
+            heartIsSet = true
+
+        }
     }
     
 }
@@ -120,6 +174,9 @@ struct CombinedViewSearch: View {
 #Preview {
     CombinedViewSearch(card: universes.data.cards[3])
 }
+
+
+
 
 
 

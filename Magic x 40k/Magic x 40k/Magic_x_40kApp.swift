@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 @main
 struct Magic_x_40kApp: App {
@@ -13,5 +15,6 @@ struct Magic_x_40kApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Favourite.self)
     }
 }

@@ -33,6 +33,7 @@
 		BDDC02CB2AD2E88D0063796A /* ManaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC02CA2AD2E88D0063796A /* ManaView.swift */; };
 		BDDE3EB42A3F7421003F6F81 /* 40k.json in Resources */ = {isa = PBXBuildFile; fileRef = BDDE3EB32A3F7421003F6F81 /* 40k.json */; };
 		BDDE3EBA2A3F7659003F6F81 /* UniversesBeyond.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */; };
+		BDECD3ED2B46ADFD00943885 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDECD3EC2B46ADFD00943885 /* Favourite.swift */; };
 		BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		BDDC02CA2AD2E88D0063796A /* ManaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManaView.swift; sourceTree = "<group>"; };
 		BDDE3EB32A3F7421003F6F81 /* 40k.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 40k.json; sourceTree = "<group>"; };
 		BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversesBeyond.swift; sourceTree = "<group>"; };
+		BDECD3EC2B46ADFD00943885 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				BD6A41C92B3DD98D00C0EB28 /* Views */,
 				BD86E6472A3DB76800083CED /* ContentView.swift */,
 				BDDE3EB92A3F7659003F6F81 /* UniversesBeyond.swift */,
+				BDECD3EC2B46ADFD00943885 /* Favourite.swift */,
 				BDDE3EB32A3F7421003F6F81 /* 40k.json */,
 				BDF4A3B12A3DBA82001ACC40 /* Bundle-Decodable.swift */,
 				BD86E6492A3DB76A00083CED /* Assets.xcassets */,
@@ -271,6 +274,7 @@
 				BD1395002B01179D00ADA78E /* CardSwipe.swift in Sources */,
 				BD7D81472AFE2085007A2873 /* Size.swift in Sources */,
 				BDF4A3B22A3DBA82001ACC40 /* Bundle-Decodable.swift in Sources */,
+				BDECD3ED2B46ADFD00943885 /* Favourite.swift in Sources */,
 				BD6A41CD2B3DF66600C0EB28 /* CombinedViewSearch.swift in Sources */,
 				BDB042A62ACFF24F000FD971 /* BackgroundModifier.swift in Sources */,
 				BD663F622AA5C59E000A1115 /* FooterView.swift in Sources */,
