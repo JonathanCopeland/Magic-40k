@@ -18,7 +18,6 @@ import SwiftData
 
 struct CombinedViewSearch: View {
 
-    @Query var favourites: [Favourite] // call favourites array in storage
     @Environment(\.modelContext) var modelContext // call temporary memory storage
 
 
@@ -94,51 +93,10 @@ struct CombinedViewSearch: View {
                 }
                 .padding(.top, 20)
             }
-
-            .toolbar {
-                
-                Button(action: setFavourite) {
-                    
-                                            Label("Favourite", systemImage: "heart.fill")
-
-//                    if(checkFavourite()) {
-//                        Label("Favourite", systemImage: "heart.fill")
-//                    }
-//                    else {
-//                        Label("Favourite", systemImage: "heart")
-//
-//                    }
-                    
-                }
-    
-                
-            }
         .scaleEffect(1.1)
         .navigationTitle("\(card.name)")
         .navigationBarTitleDisplayMode(.inline)
-        .rotation3DEffect(.degrees(dragLocation.x), axis: (x: 0, y: 1, z: 0)) // Horizontal dragging tilts along Y Axis
-        .rotation3DEffect(.degrees(dragLocation.y), axis: (x: 1, y: 0, z: 0)) // Vertical dragging tilts along X Axis
-        .gesture(
-            DragGesture(minimumDistance: 0.0)
-                .onChanged { gesture in
-                    let normalizedX = scale(inputMin: 0, inputMax: width - 4, outputMin: -intensity, outputMax: intensity, value: gesture.location.x)
-                    let normalizedY = scale(inputMin: 0, inputMax: height - 4, outputMin: intensity, outputMax: -intensity, value: gesture.location.y)
 
-                    print(normalizedX, normalizedY)
-
-                    withAnimation(isDragging ? .interactiveSpring() : .spring()) {
-                        dragLocation = CGPoint(x: normalizedX, y: normalizedY)
-                    }
-                    isDragging = true
-                }
-                .onEnded { _ in
-                    isDragging = false
-                    withAnimation(.spring()) {
-                        dragLocation = .zero
-                    }
-                }
-        )
-        
         
         
 
@@ -146,28 +104,7 @@ struct CombinedViewSearch: View {
 
     }
     
-    func checkFavourite() {
-        let a = Favourite(card: card)
-        
-        if(favourites.contains(a)) {
-            heartIsSet = true
-        } else {
-            heartIsSet = false
-        }
-    }
-    
-    func setFavourite() {
-        let a = Favourite(card: card)
-        
-        if(favourites.contains(a)) {
-            modelContext.delete(a)
-            heartIsSet = false
-        } else {
-            modelContext.insert(a)
-            heartIsSet = true
 
-        }
-    }
     
 }
 

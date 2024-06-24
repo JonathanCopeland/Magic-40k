@@ -15,6 +15,5 @@ struct Magic_x_40kApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Favourite.self)
     }
 }

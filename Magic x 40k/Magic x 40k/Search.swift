@@ -60,13 +60,18 @@ struct Search: View {
             .navigationTitle("Search")
             .searchable(text: $searchText, prompt: "Search for a card")
             .toolbar {
-                
-                Button {
-                    showingSortOptions = true
-                } label: {
-                    Label("Change sort order", systemImage: "arrow.up.arrow.down")
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        showingSortOptions = true
+                    } label: {
+                        Label("Change sort order", systemImage: "arrow.up.arrow.down")
+                    }
                 }
                 
+
+
+                
+  
 
             }
             .confirmationDialog("Sort order", isPresented: $showingSortOptions) {

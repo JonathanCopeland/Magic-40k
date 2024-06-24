@@ -13,32 +13,41 @@ let universes: UniversesBeyond = Bundle.main.decode("40k.json")
 
 struct ContentView: View {
     
-    @Environment(\.modelContext) var modelContext // Make a THING
-    @Query var favourites: [Favourite] // Create a thing
-    
+    @Environment(\.modelContext) var modelContext
+    @State private var isSearchSheetPresented = false
 
     var body: some View {
         
-        TabView {
-                CardSwipe()
-                .tabItem {
-                    Label("Cards", systemImage: "square.stack.fill")
+        NavigationView {
+            
+
+            
+            CardStack()
+                .scaleEffect(1)
+                .padding(.top, -60)
+                .navigationTitle("Cards")
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            isSearchSheetPresented = true
+                        }) {
+                            Image(systemName: "magnifyingglass.circle")
+                        }
+                    }
                 }
-                .tag("Cards")
+        
+                
+
+        }
+        .sheet(isPresented: $isSearchSheetPresented) {
+            Search()
+        }
         
 
-                Search()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
-                }
-                .tag("Search")
-            
-
-            
-        }
         
         
     }
+    
 
     
 }
