@@ -41,7 +41,7 @@ struct DataClass: Codable {
 }
 
 // MARK: - Card
-struct Card: Codable, Identifiable {
+struct Card: Codable, Identifiable, Equatable {
     let id = UUID()
     let artist: String
     let availability: [Availability]
@@ -85,6 +85,10 @@ struct Card: Codable, Identifiable {
     let asciiName: String?
     let edhrecSaltiness: Double?
     let isPromo, isReprint: Bool?
+    
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name
+    }
 }
 
 enum Availability: String, Codable {
