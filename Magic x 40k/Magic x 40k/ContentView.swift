@@ -19,9 +19,7 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            
 
-            
             CardStack()
                 .scaleEffect(1)
                 .padding(.top, -60)
@@ -42,14 +40,9 @@ struct ContentView: View {
         .sheet(isPresented: $isSearchSheetPresented) {
             Search()
         }
-        
-
-        
-        
+ 
     }
-    
 
-    
 }
 
 #Preview {
